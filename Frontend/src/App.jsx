@@ -2,11 +2,11 @@ import React from 'react'
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import Home from './Components/Home'
 import {SnackbarProvider} from 'notistack'
-import Navbar from './Components/Navbar'
 import Signup from './Components/Signup'
 import Login from './Components/Login'
 import AddProduct from './Components/AddProduct'
 import Contactus from './Components/Contactus'
+
 import './App.css'
 
 
@@ -15,7 +15,6 @@ const App = () => {
     <div>
       <SnackbarProvider/>
       <BrowserRouter>
-      <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/Home' element={<Home />} />

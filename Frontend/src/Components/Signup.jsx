@@ -2,7 +2,9 @@ import React from 'react'
 
 const Signup = () => {
   return (
-    <div><section className="h-100 bg-dark">
+    <div> 
+     <link rel="stylesheet" href="style.css" />
+      <section className="h-100 bg-dark">
     <div className="container py-5 h-100">
       <div className="row d-flex justify-content-center align-items-center h-100">
         <div className="col">
