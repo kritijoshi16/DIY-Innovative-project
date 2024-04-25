@@ -5,16 +5,20 @@
 
 .main{
     width: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(1.jpg);
+  /* background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(../src/assets/bg.jpg);*/
+  background-image: url(https://okcredit-blog-images-prod.storage.googleapis.com/2021/02/diy3.jpg);
     background-position: center;
     background-size: cover;
     height: 100vh;
+    
 }
 
 .navbar{
-    width: 1200px;
-    height: 75px;
-    margin: auto;
+    width: 100%;
+    height: 80px;
+   margin:auto;
+    background-color: #000;
+    
 }
 
 .icon{
@@ -37,6 +41,7 @@
     width: 400px;
     float: left;
     height: 70px;
+  
 }
 
 ul{
@@ -112,10 +117,10 @@ ul li a:hover{
     outline: none;
 }
 
-.content{
+.content {
     width: 1200px;
     height: auto;
-    margin: auto;
+
     color: #fff;
     position: relative;
 }
@@ -132,8 +137,10 @@ ul li a:hover{
     font-family: 'Times New Roman';
     font-size: 50px;
     padding-left: 20px;
-    margin-top: 9%;
+    margin-top: 0%;
     letter-spacing: 2px;
+    text-align: center;
+    justify-content: center;
 }
 
 .content .cn{
@@ -274,4 +281,16 @@ ul li a:hover{
     top: 13px;
     }
     
-
+    .testimonial-card .card-up {
+        height: 120px;
+        overflow: hidden;
+        border-top-left-radius: 0.25rem;
+        border-top-right-radius: 0.25rem;
+      }
+      .testimonial-card .avatar {
+        width: 110px;
+        margin-top: -60px;
+        overflow: hidden;
+        border: 3px solid #fff;
+        border-radius: 50%;
+      }
