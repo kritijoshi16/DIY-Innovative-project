@@ -6,8 +6,8 @@ import Signup from './Components/Signup'
 import Login from './Components/Login'
 import AddProduct from './Components/AddProduct'
 import Contactus from './Components/Contactus'
-
 import './App.css'
+import ProductListing from './Components/ProductListing'
 
 
 const App = () => {
@@ -22,6 +22,7 @@ const App = () => {
         <Route path='/Login' element={<Login />} />
         <Route path='/AddProduct' element={<AddProduct />} />
         <Route path='/Contactus' element={<Contactus />} />
+        <Route path='/ProductListing' element={<ProductListing />} />
 
     
 

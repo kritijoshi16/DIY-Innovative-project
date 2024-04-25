@@ -1,249 +1,103 @@
 import React from 'react'
+import {useFormik} from 'formik'
+import * as Yup from 'yup'
+import { enqueueSnackbar } from 'notistack'
+
+const AddProductSchema =Yup.object().shape({
+  name: Yup.string()
+  .required('Name is required')
+  .min(3, 'Name must be at least 3 characters')
+  .max(15, 'Name must be at most 15 characters'),
+
+})
 
 const AddProduct = () => {
-  return (
-    <div><section style={{ backgroundColor: "#eee" }}>
-    <div className="text-center container py-5">
-      <h4 className="mt-4 mb-5">
-        <strong>Bestsellers</strong>
-      </h4>
-      <div className="row">
-        <div className="col-lg-4 col-md-12 mb-4">
-          <div className="card">
-            <div
-              className="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
-              data-mdb-ripple-color="light"
-            >
-              <img
-                src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/belt.webp"
-                className="w-100"
-              />
-              <a href="#!">
-                <div className="mask">
-                  <div className="d-flex justify-content-start align-items-end h-100">
-                    <h5>
-                      <span className="badge bg-primary ms-2">New</span>
-                    </h5>
-                  </div>
+  // step 1: formik initialization
+  const productForm = useFormik({
+    initialValues: {
+      name: '',
+      category: '',
+      price: '',
+      description: ''
+    },
+
+    /*onSubmit: (values, {resetForm}) =>{
+      console.log(values)
+      enqueueSnackbar('Signup successfully', {varient: 'success'})
+      resetForm()
+
+    },*/
+    onSubmit: async(values,action) => {
+      console.log(values);
+      const res=await fetch('http://localhost:5000/product/add',{
+        method: 'POST',
+        body: JSON.stringify(values),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      console.log(res.status)
+      action.resetForm()
+
+      if (res.status === 200){
+        enqueueSnackbar('Product successful', {varient: 'success'})
+      }else {
+        enqueueSnackbar('Product failed', {varient:'error'})
+
+      }
+    },
+    validationSchema: AddProductSchema
+  })
+    return (
+        <div className='container'>
+            <div className="col">
+                <div className="card w-25 d-block mx-auto">
+                    <div className="card-header">
+                        <h3>Product</h3>
+                    </div>
+                    <div className="card-body">
+                      {/* step2: handling when submit */ }
+                        <form onSubmit={productForm.handleSubmit}>
+                        <div className="form-group">
+                            <label>Name</label>
+                            <span style={{color: 'red', fontSize: '10'}}>{productForm.touched.name && productForm.errors.name}</span>
+                            <input type="text" className="form-control mb-4" 
+                            id="name"
+                            onChange={productForm.handleChange}
+                            value={productForm.values.name}/>
+                            
+                        </div>
+                        <div className="form-group">
+                            <label>Category</label>
+                            <span style={{color: 'red', fontSize: '10'}}>{productForm.touched.category && productForm.errors.category}</span>
+                            <input type="text" className="form-control mb-4"
+                            id="category"
+                            onChange={productForm.handleChange}
+                            value={productForm.values.category} />
+                        </div>
+                        <div className="form-group">
+                            <label>Price</label>
+                            <span style={{color: 'red', fontSize: '10'}}>{productForm.touched.price && productForm.errors.price}</span>
+                            <input type="number" className="form-control mb-4"
+                            id="price"
+                            onChange={productForm.handleChange}
+                            value={productForm.values.price} />
+                        </div>
+                        <div className="form-group">
+                            <label>Description</label>
+                            <span style={{color: 'red', fontSize: '10'}}>{productForm.touched.description && productForm.errors.description}</span>
+                            <input type="text" className="form-control mb-4"
+                            id="description"
+                            onChange={productForm.handleChange}
+                            value={productForm.values.description} />
+                        </div>
+                        <button type='submit' className="btn btn-primary">Submit Product</button>
+                    </form>
                 </div>
-                <div className="hover-overlay">
-                  <div
-                    className="mask"
-                    style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
-                  />
-                </div>
-              </a>
             </div>
-            <div className="card-body">
-              <a href="" className="text-reset">
-                <h5 className="card-title mb-3">Product name</h5>
-              </a>
-              <a href="" className="text-reset">
-                <p>Category</p>
-              </a>
-              <h6 className="mb-3">$61.99</h6>
-            </div>
-          </div>
         </div>
-        <div className="col-lg-4 col-md-6 mb-4">
-          <div className="card">
-            <div
-              className="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
-              data-mdb-ripple-color="light"
-            >
-              <img
-                src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/img%20(4).webp"
-                className="w-100"
-              />
-              <a href="#!">
-                <div className="mask">
-                  <div className="d-flex justify-content-start align-items-end h-100">
-                    <h5>
-                      <span className="badge bg-success ms-2">Eco</span>
-                    </h5>
-                  </div>
-                </div>
-                <div className="hover-overlay">
-                  <div
-                    className="mask"
-                    style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
-                  />
-                </div>
-              </a>
-            </div>
-            <div className="card-body">
-              <a href="" className="text-reset">
-                <h5 className="card-title mb-3">Product name</h5>
-              </a>
-              <a href="" className="text-reset">
-                <p>Category</p>
-              </a>
-              <h6 className="mb-3">$61.99</h6>
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-4 col-md-6 mb-4">
-          <div className="card">
-            <div
-              className="bg-image hover-zoom ripple"
-              data-mdb-ripple-color="light"
-            >
-              <img
-                src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/shoes%20(3).webp"
-                className="w-100"
-              />
-              <a href="#!">
-                <div className="mask">
-                  <div className="d-flex justify-content-start align-items-end h-100">
-                    <h5>
-                      <span className="badge bg-danger ms-2">-10%</span>
-                    </h5>
-                  </div>
-                </div>
-                <div className="hover-overlay">
-                  <div
-                    className="mask"
-                    style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
-                  />
-                </div>
-              </a>
-            </div>
-            <div className="card-body">
-              <a href="" className="text-reset">
-                <h5 className="card-title mb-3">Product name</h5>
-              </a>
-              <a href="" className="text-reset">
-                <p>Category</p>
-              </a>
-              <h6 className="mb-3">
-                <s>$61.99</s>
-                <strong className="ms-2 text-danger">$50.99</strong>
-              </h6>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-lg-4 col-md-12 mb-4">
-          <div className="card">
-            <div
-              className="bg-image hover-zoom ripple"
-              data-mdb-ripple-color="light"
-            >
-              <img
-                src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/img%20(23).webp"
-                className="w-100"
-              />
-              <a href="#!">
-                <div className="mask">
-                  <div className="d-flex justify-content-start align-items-end h-100">
-                    <h5>
-                      <span className="badge bg-success ms-2">Eco</span>
-                      <span className="badge bg-danger ms-2">-10%</span>
-                    </h5>
-                  </div>
-                </div>
-                <div className="hover-overlay">
-                  <div
-                    className="mask"
-                    style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
-                  />
-                </div>
-              </a>
-            </div>
-            <div className="card-body">
-              <a href="" className="text-reset">
-                <h5 className="card-title mb-3">Product name</h5>
-              </a>
-              <a href="" className="text-reset">
-                <p>Category</p>
-              </a>
-              <h6 className="mb-3">
-                <s>$61.99</s>
-                <strong className="ms-2 text-danger">$50.99</strong>
-              </h6>
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-4 col-md-6 mb-4">
-          <div className="card">
-            <div
-              className="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
-              data-mdb-ripple-color="light"
-            >
-              <img
-                src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/img%20(17).webp"
-                className="w-100"
-              />
-              <a href="#!">
-                <div className="mask">
-                  <div className="d-flex justify-content-start align-items-end h-100" />
-                </div>
-                <div className="hover-overlay">
-                  <div
-                    className="mask"
-                    style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
-                  />
-                </div>
-              </a>
-            </div>
-            <div className="card-body">
-              <a href="" className="text-reset">
-                <h5 className="card-title mb-3">Product name</h5>
-              </a>
-              <a href="" className="text-reset">
-                <p>Category</p>
-              </a>
-              <h6 className="mb-3">$61.99</h6>
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-4 col-md-6 mb-4">
-          <div className="card">
-            <div
-              className="bg-image hover-zoom ripple"
-              data-mdb-ripple-color="light"
-            >
-              <img
-                src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/img%20(30).webp"
-                className="w-100"
-              />
-              <a href="#!">
-                <div className="mask">
-                  <div className="d-flex justify-content-start align-items-end h-100">
-                    <h5>
-                      <span className="badge bg-primary ms-2">New</span>
-                      <span className="badge bg-success ms-2">Eco</span>
-                      <span className="badge bg-danger ms-2">-10%</span>
-                    </h5>
-                  </div>
-                </div>
-                <div className="hover-overlay">
-                  <div
-                    className="mask"
-                    style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
-                  />
-                </div>
-              </a>
-            </div>
-            <div className="card-body">
-              <a href="" className="text-reset">
-                <h5 className="card-title mb-3">Product name</h5>
-              </a>
-              <a href="" className="text-reset">
-                <p>Category</p>
-              </a>
-              <h6 className="mb-3">
-                <s>$61.99</s>
-                <strong className="ms-2 text-danger">$50.99</strong>
-              </h6>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  </div>
+    </div >
+    
   )
 }
 

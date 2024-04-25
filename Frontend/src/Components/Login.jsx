@@ -1,4 +1,18 @@
 import React from 'react'
+import {useFormik} from 'formik'
+import * as Yup from 'yup'
+import { enqueueSnackbar } from 'notistack'
+
+const LoginSchema =Yup.object().shape({
+  name: Yup.string()
+  .required('Name is required')
+  .min(3, 'Name must be at least 3 characters')
+  .max(15, 'Name must be at most 15 characters'),
+  password: Yup.string()
+  .required('Password is required')
+  .min(8, 'Password must be at least 8 characters')
+  .max(15, 'Password must be at most 15 characters')
+})
 
 const Login = () => {
   return (
