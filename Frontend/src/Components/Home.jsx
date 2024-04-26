@@ -8,8 +8,8 @@ const Home = () => {
     <div className="main">
       <div className="content">
         <h1>
-          DIY &amp; <br />
-          <span>Project</span> <br />
+            WELCOME TO  <br />
+          <span>DIVSpark</span> <br />
           Course
         </h1>
         <p className="par">

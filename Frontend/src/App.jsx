@@ -7,12 +7,9 @@ import Login from './Components/Login'
 import AddProduct from './Components/AddProduct'
 import Contactus from './Components/Contactus'
 import './App.css'
-<<<<<<< HEAD
-import ProductListing from './Components/ProductListing'
-=======
 import Home from './Components/Home'
 import Navbar from './Components/Navbar'
->>>>>>> 83ac1614515a3f031bb3b7d8267fdeca12599dfa
+import ProductListing from './Components/ProductListing'
 
 
 const App = () => {

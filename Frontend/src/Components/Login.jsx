@@ -15,13 +15,43 @@ const LoginSchema =Yup.object().shape({
 })
 
 const Login = () => {
+
+    // step 1: formik initialization
+    const loginForm = useFormik({
+      initialValues: {
+        name: '',
+        email: '',
+        password: ''
+      },
+      onSubmit: async(values,action) => {
+        console.log(values);
+        const res=await fetch('http://localhost:5000/user/authenticate',{
+          method: 'POST',
+          body: JSON.stringify(values),
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
+        console.log(res.status)
+        action.resetForm()
+  
+        if (res.status === 200){
+          enqueueSnackbar('Login successful', {varient: 'success'});
+        }setLOggedIn(true);
+        const data = await res.json();
+        console.log(data);
+        sessionStorage.SetItem('User',JSON.stringify(data))
+      },
+      
+      validationSchema: LoginSchema
+    })
   return (
     <div><section className="vh-100" style={{ backgroundColor:"#eee" }}>
     <div className="container h-100">
       <div className="row d-flex justify-content-center align-items-center h-100">
         <div className="col-lg-12 col-xl-11">
           <div className="card text-black" style={{ borderRadius: 25 }}>
-            <div className="card-body p-md-5" style={{ backgroundColor:"darkgrey"}}> 
+            <div className="card-body p-md-7" style={{ backgroundColor:"darkgrey"}}> 
               <div className="row justify-content-center">
                 <div className="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
                   <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
@@ -34,13 +64,19 @@ const Login = () => {
                         data-mdb-input-init=""
                         className="form-outline flex-fill mb-0"
                       >
-                        <input
+                        {/*<input
                           type="text"
                           id="form3Example1c"
                           className="form-control"
-                        />
+  />*/}
+
+                        <span style={{color: 'red', fontSize: '10'}}>{loginForm.touched.name && loginForm.errors.name}</span>
+                            <input type="text" className="form-control mb-4" 
+                            id="name"
+                            onChange={loginForm.handleChange}
+                            value={loginForm.values.name}/>
                         <label className="form-label" htmlFor="form3Example1c">
-                          Your Name
+                           Name
                         </label>
                       </div>
                     </div>
@@ -50,13 +86,19 @@ const Login = () => {
                         data-mdb-input-init=""
                         className="form-outline flex-fill mb-0"
                       >
-                        <input
+                        {/*<input
                           type="email"
                           id="form3Example3c"
                           className="form-control"
-                        />
+/>*/}
+
+                        <span style={{color: 'red', fontSize: '10'}}>{loginForm.touched.email && loginForm.errors.email}</span>
+                            <input type="text" className="form-control mb-4"
+                            id="email"
+                            onChange={loginForm.handleChange}
+                            value={loginForm.values.email} />
                         <label className="form-label" htmlFor="form3Example3c">
-                          Your Email
+                           Email
                         </label>
                       </div>
                     </div>
@@ -66,14 +108,20 @@ const Login = () => {
                         data-mdb-input-init=""
                         className="form-outline flex-fill mb-0"
                       >
-                        <input
+                       {/* <input
                           type="password"
                           id="form3Example4c"
                           className="form-control"
-                        />
+  />*/}
+
+                        <span style={{color: 'red', fontSize: '10'}}>{loginForm.touched.password && loginForm.errors.password}</span>
+                            <input type="text" className="form-control mb-4"
+                            id="password"
+                            onChange={loginForm.handleChange}
+                            value={loginForm.values.password} />
                         <label className="form-label" htmlFor="form3Example4c">
                           Password
-                        </label>
+                        </label>    
                       </div>
                     </div>
                     <div className="d-flex flex-row align-items-center mb-4">
@@ -82,11 +130,16 @@ const Login = () => {
                         data-mdb-input-init=""
                         className="form-outline flex-fill mb-0"
                       >
-                        <input
+                       {/*} <input
                           type="password"
                           id="form3Example4cd"
                           className="form-control"
-                        />
+/>*/}
+                        <span style={{color: 'red', fontSize: '10'}}>{loginForm.touched.password && loginForm.errors.password}</span>
+                            <input type="text" className="form-control mb-4"
+                            id="password"
+                            onChange={loginForm.handleChange}
+                            value={loginForm.values.password} />
                         <label className="form-label" htmlFor="form3Example4cd">
                           Repeat your password
                         </label>

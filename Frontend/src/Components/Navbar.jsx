@@ -13,11 +13,17 @@ const Navbar = () => {
           <li>
             <Link to="/Home">HOME</Link>
           </li>
-          <li>
+          {/*<li>
             <Link to="/About">ABOUT</Link>
+  </li>*/}
+          <li>
+            <Link to="/AddProduct">PRODUCT</Link>
           </li>
           <li>
-            <Link to="/Contact">CONTACT</Link>
+            <Link to="/ProductListing">PRODUCTLIST</Link>
+          </li>
+          <li>
+            <Link to="/ContactUs">CONTACT</Link>
           </li>
           <li>
             <Link to="/Login">LOGIN</Link>
@@ -39,7 +45,7 @@ const Navbar = () => {
           {" "}
           <button className="btn">Search</button>
         </a>
-      </div>
+  </div>
     </div>
    </>
   )

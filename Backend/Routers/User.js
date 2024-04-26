@@ -14,4 +14,25 @@ router.post('/add', (req,res) => {
     });
 });
 
+router.post('/authenticate', (req,res)=>{
+    Model.findOne(req.body)
+    .then((result) => {
+        if(result) res.json (result);
+        else res.status(400).json ({message: 'login failed'});
+    }).catch((err) => {
+        console.log(err);
+        res.status(500).json (err)
+    });
+})
+
+router.get('/getall',(req,res) => {
+    Model.find({})
+    .then((reset)=> {
+        res.json(result); 
+    }).catch((err)=>{
+        console.log(err);
+        res.status(500).json (err)
+    });
+})
+
 module.exports = router;
