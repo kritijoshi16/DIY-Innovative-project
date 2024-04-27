@@ -29,6 +29,7 @@ const Signup = () => {  // step 1: formik initialization
       email: '',
       password: ''
     },
+    // validation schema
     onSubmit: async(values,action) => {
       console.log(values);
       const res=await fetch('http://localhost:5000/user/add',{
@@ -71,6 +72,7 @@ const Signup = () => {  // step 1: formik initialization
                   }}
                 />
               </div>
+              <form onSubmit={signupForm.handleSubmit}>
               <div className="col-xl-6">
                 <div className="card-body p-md-5 text-black">
                   <h3 className="mb-5 text-uppercase"> Signup Form
@@ -163,12 +165,13 @@ const Signup = () => {  // step 1: formik initialization
                       type='submit'
                       data-mdb-button-init=""
                       data-mdb-ripple-init=""
-                      className="btn btn-warning btn-lg ms-2" onSubmit={signupForm.handleSubmit} >
+                      className="btn btn-warning btn-lg ms-2" >
                       Submit
                     </button>
                   </div>
                 </div>
               </div>
+              </form>
             </div>
           </div>
         </div>

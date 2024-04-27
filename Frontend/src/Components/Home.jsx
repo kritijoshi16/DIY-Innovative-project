@@ -8,10 +8,11 @@ const Home = () => {
     <div className="main">
       <div className="content">
         <h1>
-            WELCOME TO  <br />
+            WELCOME TO <br />
           <span>DIVSpark</span> <br />
           Course
-        </h1>
+          </h1>
+        
         <p className="par">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt neque
           expedita atque eveniet <br /> quis nesciunt. Quos nulla vero
