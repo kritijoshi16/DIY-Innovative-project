@@ -1,6 +1,5 @@
 import React from 'react'
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
-
 import {SnackbarProvider} from 'notistack'
 import Signup from './Components/Signup'
 import Login from './Components/Login'
@@ -10,13 +9,15 @@ import './App.css'
 import Home from './Components/Home'
 import Navbar from './Components/Navbar'
 import ProductListing from './Components/ProductListing'
+import { AppProvider } from '../src/AppContext'
 
 
 const App = () => {
   return (
     <div>
-      <SnackbarProvider/>
+      <SnackbarProvider>
       <BrowserRouter>
+      <AppProvider>
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home />} />
@@ -30,7 +31,9 @@ const App = () => {
     
 
       </Routes>
+      </AppProvider>
       </BrowserRouter>
+      </SnackbarProvider>
     </div>
   )
 }

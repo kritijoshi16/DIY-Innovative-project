@@ -1,6 +1,31 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import useAppContext from '../AppContext'
+
 const Navbar = () => {
+  const {loggedIn, logout} = useAppContext();
+  console.log(loggedIn)
+  const showLoggedin = () => {
+    if (loggedIn) {
+      return (
+        <ul>
+          <li>
+            {/*<Link to='/Logout' />*/}
+            <button onClick={logout}>Logout</button>
+          </li>
+        </ul>
+      );
+    } else {
+      <ul>
+        <li>
+          <Link to="/Signup">Signup</Link>
+        </li>
+        <li>
+          <Link to="/Login">Login</Link>
+        </li>
+      </ul>
+    }
+  }
   return (
     <>
  
@@ -25,12 +50,9 @@ const Navbar = () => {
           <li>
             <Link to="/ContactUs">CONTACT</Link>
           </li>
-          <li>
-            <Link to="/Login">LOGIN</Link>
-          </li>
-          <li>
-            <Link to="/Signup">SIGNUP</Link>
-          </li>
+          <li>{showLoggedin()}</li>
+            
+          
 
         </ul>
       </div>

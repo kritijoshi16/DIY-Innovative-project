@@ -20,7 +20,7 @@ const Home = () => {
           <br /> a quae totam ipsa illum minus laudantium?
         </p>
         <button className="cn">
-          <a href="#">JOIN US</a>
+          <Link to="#">JOIN US</Link>
         </button>
            </div>       
         
