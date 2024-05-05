@@ -1,7 +1,55 @@
 import React from 'react'
 import DIY from "../assets/DIY.jpg"
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+import { enqueueSnackbar } from 'notistack';
+
+const ContactusSchema = Yup.object().shape({
+  fullname: Yup.string()
+    .required('FullName is required'),
+
+  email: Yup.string()
+    .required('Email is required')
+    .email('Email is invalid'),
+
+  message: Yup.string()
+    .required('Message is required'),
+    
+});
 
 const Contactus = () => {
+  const contactusForm = useFormik({
+    initialValues: {
+      fullname: '',
+      email: '',
+      number: '',
+      message: ''
+    },
+    onSubmit: async (values, action) => {
+      try {
+        const res = await fetch('http://localhost:5000/user/add', {
+          method: 'POST',
+          body: JSON.stringify(values),
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
+
+        if (res.status === 200) {
+          enqueueSnackbar('Contactus successful', { variant: 'success' });
+          action.resetForm();
+        } else {
+          const data = await res.json();
+          enqueueSnackbar(data.message || 'Contactus failed', { variant: 'error' });
+        }
+      } catch (error) {
+        console.error('Contactus failed:', error);
+        enqueueSnackbar('Contactus failed', { variant: 'error' });
+      }
+    },
+    validationSchema: ContactusSchema
+  });
+
   return (
     <div><>
     {/* Contact 4 - Bootstrap Brain Component */}
@@ -10,10 +58,10 @@ const Contactus = () => {
         <div className="row justify-content-md-center">
           <div className="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
             <h3 className="fs-6 text-secondary mb-2 text-uppercase text-center">
-              Get in Touch
+              Do hands-on Craft
             </h3>
             <h2 className="display-5 mb-4 mb-md-5 text-center">
-              We're always on the lookout to work with new clients.
+            Crafting memories, not just materials, through DIY adventures.
             </h2>
             <hr className="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle" />
           </div>
@@ -34,7 +82,7 @@ const Contactus = () => {
             <div className="row justify-content-xl-center">
               <div className="col-12 col-xl-11">
                 <div className="bg-white border rounded shadow-sm overflow-hidden">
-                  <form action="#!">
+                  <form onSubmit={contactusForm.handleSubmit}>
                     <div className="row gy-4 gy-xl-5 p-4 p-xl-5">
                       <div className="col-12">
                         <label htmlFor="fullname" className="form-label">
@@ -47,6 +95,8 @@ const Contactus = () => {
                           name="fullname"
                           defaultValue=""
                           required=""
+                          onChange={contactusForm.handleChange}
+                          value={contactusForm.values.fullname}
                         />
                       </div>
                       <div className="col-12 col-md-6">
@@ -55,8 +105,6 @@ const Contactus = () => {
                         </label>
                         <div className="input-group">
                           <span className="input-group-text" style={{}}>
-                           
-                             
                           </span>
                           <input
                             type="email"
@@ -65,6 +113,8 @@ const Contactus = () => {
                             name="email"
                             defaultValue=""
                             required=""
+                            onChange={contactusForm.handleChange}
+                          value={contactusForm.values.email}
                           />
                         </div>
                       </div>
@@ -91,6 +141,8 @@ const Contactus = () => {
                             id="phone"
                             name="phone"
                             defaultValue=""
+                            onChange={contactusForm.handleChange}
+                          value={contactusForm.values.phone}
                           />
                         </div>
                       </div>
@@ -105,6 +157,8 @@ const Contactus = () => {
                           rows={3}
                           required=""
                           defaultValue={""}
+                          onChange={contactusForm.handleChange}
+                          value={contactusForm.values.message}
                         />
                       </div>
                       <div className="col-12">
@@ -112,8 +166,9 @@ const Contactus = () => {
                           <button
                             className="btn btn-primary btn-lg"
                             type="submit"
+                            
                           >
-                            Send Message
+                          Send
                           </button>
                         </div>
                       </div>

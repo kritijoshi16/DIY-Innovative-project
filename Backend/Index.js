@@ -4,6 +4,7 @@ const port= 5000;
 const cors = require('cors');
 const userRouter = require('./Routers/User');
 const productRouter = require('./Routers/Product');
+const contactusRouter = require('./Routers/Contactus');
 
 app.use(cors({
     origin: ['http://localhost:5173']
@@ -14,6 +15,8 @@ app.use(express.json());
 app.use('/user', userRouter);
 
 app.use('/product', productRouter);
+
+app.use('/contactus', contactusRouter);
 
 
 app.listen(port, () => {

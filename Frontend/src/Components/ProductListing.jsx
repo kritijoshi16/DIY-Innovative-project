@@ -18,15 +18,18 @@ const ProductListing = () => {
 
     const displayProducts = () =>{
         return products.map((item) => (
-            <div className="container ">
+           
                 <div className="col-md-4">
-                    <div className="card p-3 mb-5 bg-dark">
-                        <h3 className='mt-3 text-light'>{item.name}</h3>
-                        <h4 className='mt-3 text-light'>{item.category}</h4>
-                        <h5 className='mt-3 text-light'>{item.price}</h5>
-                        <p className='mt-3 text-light'>{item.description}</p>
+                    <div className="card rounded shadow p-3 mb-5 ">
+                    <img src="" className='card-img-top img-fluid' alt="loading" />
+                    <div className="card-body">
+                        <h4 style={{fontFamily:"serif"}}>{item.name}</h4>
+                        <p className="">{item.category}</p>
+                        <p className="text-secondary">${item.price}</p>
+                        <p className="">{item.description}</p>
                     </div>
-                </div>
+                    </div>
+             
             </div>
         ))
     }

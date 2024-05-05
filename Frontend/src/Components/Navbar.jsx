@@ -1,10 +1,10 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import useAppContext from '../AppContext'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import useAppContext from '../AppContext';
 
 const Navbar = () => {
-  const {loggedIn, logout} = useAppContext();
-  console.log(loggedIn)
+  const { loggedIn, logout } = useAppContext();
+
   const showLoggedin = () => {
     if (loggedIn) {
       return (
@@ -16,61 +16,64 @@ const Navbar = () => {
         </ul>
       );
     } else {
-      <ul>
-        <li>
-          <Link to="/Signup">Signup</Link>
-        </li>
-        <li>
-          <Link to="/Login">Login</Link>
-        </li>
-      </ul>
-    }
-  }
-  return (
-    <>
- 
-    <div className="navbar ">
-      <div className="icon">
-        <h2 className="logo">DIYSpark</h2>
-      </div>
-      <div className="menu">
+      return (
         <ul>
           <li>
-            <Link to="/Home">HOME</Link>
+            <Link to="/Signup">Signup</Link>
           </li>
-          {/*<li>
+          <li>
+            <Link to="/Login">Login</Link>
+          </li>
+        </ul>
+      );
+    }
+  };
+
+  return (
+    <>
+      <div className="navbar">
+        <div className="icon">
+          <h2 className="logo">DIYSpark</h2>
+        </div>
+        <div className="menu me-5">
+          <ul className="navbar-links">
+            <li>
+              <Link to="/Home">HOME</Link>
+            </li>
+            {/*<li>
             <Link to="/About">ABOUT</Link>
   </li>*/}
-          <li>
-            <Link to="/AddProduct">PRODUCT</Link>
-          </li>
-          <li>
-            <Link to="/ProductListing">PRODUCTLIST</Link>
-          </li>
-          <li>
-            <Link to="/ContactUs">CONTACT</Link>
-          </li>
-          <li>{showLoggedin()}</li>
-            
-          
+            <li>
+              <Link to="/AddProduct">PRODUCT</Link>
+            </li>
+            <li>
+              <Link to="/ProductListing">PRODUCTLIST</Link>
+            </li>
+            <li>
+              <Link to="/ContactUs">CONTACT</Link>
+            </li>
+            <li>
+              <Link to="/Feedback">FEEDBACK</Link>
+            </li>
+            <li>{showLoggedin()}</li>
 
-        </ul>
+          </ul>
+        </div>
+        {/*<div className="search">
+          <input
+            className="srch"
+            type="search"
+            name=""
+            placeholder="Type To text"
+          />
+          <a href="#">
+            {" "}
+            <button className="btn">Search</button>
+          </a>
+        </div> */}
       </div>
-      <div className="search">
-        <input
-          className="srch"
-          type="search"
-          name=""
-          placeholder="Type To text"
-        />
-        <a href="#">
-          {" "}
-          <button className="btn">Search</button>
-        </a>
-  </div>
-    </div>
-   </>
-  )
-}
+    </>
+  );
+};
 
-export default Navbar
+export default Navbar;

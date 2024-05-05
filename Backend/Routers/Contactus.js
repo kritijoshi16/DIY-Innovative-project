@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Model = require('../Models/User');
+const Model = require('../Models/Contactus');
 
 router.post('/add', (req,res) => {
     console.log(req.body);
@@ -27,22 +27,12 @@ router.post('/authenticate', (req,res)=>{
 
 router.get('/getall',(req,res) => {
     Model.find({})
-    .then((result)=> {
+    .then((reset)=> {
         res.json(result); 
     }).catch((err)=>{
         console.log(err);
         res.status(500).json (err)
     });
 })
-
-router.delete("/delete/:id", (req,res) => {
-    Model.findByIdAndDelete(req.params.id)
-    .then((result) => {
-        res.status(200).json(result)
-    }).catch((err) => {
-        res.status(500).json(err);
-    });
-
-});
 
 module.exports = router;
