@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {useFormik} from 'formik'
 import * as Yup from 'yup'
 import { enqueueSnackbar } from 'notistack'
@@ -12,13 +12,34 @@ const AddProductSchema =Yup.object().shape({
 })
 
 const AddProduct = () => {
+
+  const [imageList, setImageList] = useState('');
+
+  const uploadimage = async(e) => {
+    const file = e.target.value[0];
+    setImageList(file)
+    const fd = new FormData();
+    fd.append("myfile", file);
+    fetch("http://localhost:5000/util/uploadfile", {
+      method:"POST",
+      body: fd,
+    }).then((res) => {
+      if(res.status === 200) {
+        console.log("file uploaded");
+        enqueueSnackbar("file uploaded", {variant:"success"})
+      }
+    });
+
+  }
+
   // step 1: formik initialization
   const productForm = useFormik({
     initialValues: {
       name: '',
       category: '',
       price: '',
-      description: ''
+      description: '',
+      image:''
     },
 
     /*onSubmit: (values, {resetForm}) =>{
@@ -28,6 +49,7 @@ const AddProduct = () => {
 
     },*/
     onSubmit: async(values,action) => {
+      values.image = imageList.name
       console.log(values);
       const res=await fetch('http://localhost:5000/product/add',{
         method: 'POST',
@@ -91,6 +113,14 @@ const AddProduct = () => {
                             onChange={productForm.handleChange}
                             value={productForm.values.description} />
                         </div>
+                        <div className="form-group">
+                            <label for='upload-image'>Upload File</label>
+                             
+                            <input type="file" className="form-control mb-4" id='upload-image'
+                             onChange={uploadimage}
+                           />
+                        </div>
+
                         <button type='submit' className="btn btn-primary">Submit Product</button>
                     </form>
                 </div>

@@ -62,10 +62,10 @@ const Signup = () => {
   return (
     <div>
       <section className="h-100"style={{ backgroundColor: "lightblue" }}>
-        <div className="container py-5 h-100">
-          <div className="row d-flex justify-content-center align-items-center h-100">
-            <div className="col-md-6">
-              <div className="card card-registration my-4">
+        <div className="container py-5 ">
+          <div className="row d-flex justify-content-center align-items-center h-100 gx-0">
+            <div className="col-md-6 ">
+              <div className="card card-registration ">
                 <form onSubmit={signupForm.handleSubmit}>
                   <div className="card-body p-md-5 text-black">
                     <h3 className="mb-5 text-uppercase">Signup Form</h3>
@@ -134,16 +134,18 @@ const Signup = () => {
                 </form>
               </div>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 ">
               <img
                 src="https://img.freepik.com/free-photo/young-child-making-diy-project-from-upcycled-materials_23-2149391054.jpg"
                 alt="Sample photo"
-                className="img-fluid"
+                className="img-fluid  "
                 style={{
                   borderTopLeftRadius: ".25rem",
                   borderBottomLeftRadius: ".25rem",
                   objectFit: 'cover',
                   objectPosition: "right",
+                  height:"80%",
+                  width:"60%",
                 }}
               />
             </div>

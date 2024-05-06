@@ -3,6 +3,7 @@ const productSchema = new  Schema({
     name: String,
     category: String,
     price: Number,
-    description: String
+    description: String,
+    image: String
 });
 module.exports = model('product', productSchema)
