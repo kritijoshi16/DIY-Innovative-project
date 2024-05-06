@@ -42,12 +42,7 @@ const AddProduct = () => {
       image:''
     },
 
-    /*onSubmit: (values, {resetForm}) =>{
-      console.log(values)
-      enqueueSnackbar('Signup successfully', {varient: 'success'})
-      resetForm()
-
-    },*/
+  
     onSubmit: async(values,action) => {
       values.image = imageList.name
       console.log(values);

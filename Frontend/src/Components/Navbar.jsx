@@ -16,12 +16,12 @@ const Navbar = () => {
          </ul>
        );
      } else{
-      return <div >
+      return <div  className='d-flex'>
         <ul >
-        <Link className="nav-link" to="SignUp">
+        <Link className="btn btn-primary me-3  " to="SignUp">
             Signup
           </Link>
-          <Link className="nav-link" to="Login">
+          <Link className="btn btn-primary me-2" to="Login">
             Login
           </Link>
 
@@ -66,7 +66,7 @@ const Navbar = () => {
               </a>
             </li>
             
-            {showLoggedIn()}
+          
             <li className="nav-item dropdown">
               <a
                 className="nav dropdown-toggle"
@@ -100,6 +100,7 @@ const Navbar = () => {
 
               </ul>
             </li>
+            {showLoggedIn()}
           </ul>
         </div>
       </div>
