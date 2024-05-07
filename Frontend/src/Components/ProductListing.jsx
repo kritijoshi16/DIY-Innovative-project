@@ -20,7 +20,7 @@ const ProductListing = () => {
         return products.map((item) => (
            
                 <div className="col-md-4">
-                    <div className="card rounded shadow p-3 mb-5 ">
+                    <div className="card rounded shadow p-4 mb-4 ">
                     <img src="" className='card-img-top img-fluid' alt="loading" />
                     <div className="card-body">
                         <h4 style={{fontFamily:"serif"}}>{item.name}</h4>
@@ -35,7 +35,7 @@ const ProductListing = () => {
     }
   return (
     <div>
-        <header className='bg-body-tertiary'>
+        <header className='bg-body-tertiary' style={{ backgroundColor: "lightblue" }}>
             <div className="container py-5">
                 <p className='text-center fw-bold'>All Products</p>
                 <input type='text' placeholder='Search Products' className='form-control w-75 m-auto' />

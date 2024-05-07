@@ -111,7 +111,7 @@ const AddProduct = () => {
                         <div className="form-group">
                             <label for='upload-image'>Upload File</label>
                              
-                            <input type="file" className="form-control mb-4" id='upload-image'
+                            <input type="file" className="form-control mb-4"
                              onChange={uploadimage}
                            />
                         </div>

@@ -15,6 +15,7 @@ import Admin from './Components/admin'
 import ManageProduct from './Components/admin/ManageProduct'
 import UpdateProduct from './Components/admin/UpdateProduct'
 import Feedback from './Components/Feedback'
+import ForgetPassword from './Components/ForgetPassword'
 
 
 const App = () => {
@@ -34,6 +35,7 @@ const App = () => {
         <Route path='/ProductListing' element={<ProductListing />} />
         <Route path='/Feedback' element={<Feedback />} />
         <Route path='/ManageUser' element={<ManageUser />} />
+        <Route path='/ForgetPassword' element={<ForgetPassword />} />
 
        <Route path='/admin' element={<Admin/>}>
         <Route path='manageproduct' element={<ManageProduct/>}/>

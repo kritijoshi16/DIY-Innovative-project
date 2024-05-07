@@ -75,10 +75,6 @@ const Login = () => {
         setshowpassword(preve => !preve)
     }
 
-
-
-
-
     return (
         <>
         <section className="vh-100" style={{ backgroundColor: "lightblue" }}>
@@ -145,9 +141,9 @@ const Login = () => {
                       Login
                     </button>
                   </div>
-                  <a className="small text-muted" href="#!">
+                  <Link className="small text-muted" to="/ForgetPassword">
                     Forgot password?
-                  </a>
+                  </Link>
                   <p className="mb-5 pb-lg-2" style={{ color: "#393f81" }}>
                     Don't have an account?{" "}
                     <Link to='/Signup' style={{ color: "#393f81" }}>
@@ -169,7 +165,6 @@ const Login = () => {
     </div>
   </div>
 </section>
-
 
         </>
     )

@@ -35,7 +35,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg ">
       <div className="container-fluid">
         <a className="logo" href="#">
-          DIVSpark
+          DIYSpark
         </a>
         <button
           className="navbar-toggler"
