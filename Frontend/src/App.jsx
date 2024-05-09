@@ -17,6 +17,7 @@ import UpdateProduct from './Components/admin/UpdateProduct'
 import Feedback from './Components/Feedback'
 import ForgetPassword from './Components/ForgetPassword'
 import ViewProduct from './Components/ViewProduct'
+import Tutorial from './Components/Tutorial'
 
 
 const App = () => {
@@ -38,6 +39,7 @@ const App = () => {
       
         <Route path='/ForgetPassword' element={<ForgetPassword />} />
         <Route path='/ViewProduct' element={<ViewProduct />} />
+        <Route path='/Tutorial' element={<Tutorial />} />
       
 
        <Route path='/admin' element={<Admin/>}>
