@@ -40,10 +40,10 @@ const ProductListing = () => {
                           <button
                           disabled={isInCart(item)}
                           onClick={(e) => addItemToCart(item)}
-                          className='btn btn-warning me-2'>
+                          className='btn btn-warning me-2 px-2'>
                             <span>{isInCart(item) ? "Added" : "Add to Cart"}</span>
                           </button>
-                          <button className='btn btn-warning px-2'>Add to cart</button>
+                          <button className='btn btn-warning '>View</button>
                         </div>
                     </div>
                 </div>

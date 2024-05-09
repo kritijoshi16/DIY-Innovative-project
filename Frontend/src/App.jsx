@@ -18,6 +18,8 @@ import Feedback from './Components/Feedback'
 import ForgetPassword from './Components/ForgetPassword'
 import ViewProduct from './Components/ViewProduct'
 import Tutorial from './Components/Tutorial'
+import Cart from './Components/Cart'
+import { ProductProvider } from './Components/context/ProductContext'
 
 
 const App = () => {
@@ -25,6 +27,7 @@ const App = () => {
     <div>
       <SnackbarProvider>
       <BrowserRouter>
+      <ProductProvider>
       <AppProvider>
       <Navbar/>
       <Routes>
@@ -40,6 +43,7 @@ const App = () => {
         <Route path='/ForgetPassword' element={<ForgetPassword />} />
         <Route path='/ViewProduct' element={<ViewProduct />} />
         <Route path='/Tutorial' element={<Tutorial />} />
+        <Route path='/Cart' element={<Cart />} />
       
 
        <Route path='/admin' element={<Admin/>}>
@@ -53,6 +57,7 @@ const App = () => {
 
       </Routes>
       </AppProvider>
+      </ProductProvider>
       </BrowserRouter>
       </SnackbarProvider>
     </div>

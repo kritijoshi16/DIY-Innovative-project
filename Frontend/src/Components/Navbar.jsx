@@ -3,6 +3,7 @@ import useAppContext from '../AppContext'
 import { Link } from 'react-router-dom';
 import useProductContext from './context/ProductContext';
 
+
 const Navbar = () => {
 
   const { loggedIn, logout } = useAppContext();
@@ -110,9 +111,9 @@ const Navbar = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a href="">
-               <span>{getCartItemsCount()}<i className="bi bi-cart-check-fill"></i></span>   
-                </a>
+                <Link to={"/Cart"}>
+               <span className='text-white'>{getCartItemsCount()}<i className="bi bi-cart-check-fill "></i></span>   
+                </Link>
 
               </li>
             </ul>
