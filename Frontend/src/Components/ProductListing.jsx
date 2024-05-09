@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
+import useProductContext from './context/ProductContext';
 
 const ProductListing = () => {
     const [products, setProducts] = useState([])
     const [masterList, setMasterList] = useState([]);
+    const {addItemToCart, isInCart } = useProductContext();
 
     const fetchProducts = async () => {
         const res = await fetch('http://localhost:5000/product/getall')
@@ -35,7 +37,12 @@ const ProductListing = () => {
                     </div>
                     <div className="card-footer">
                     <div className='text-center'>
-                          <button className='btn btn-warning me-2'>View</button>
+                          <button
+                          disabled={isInCart(item)}
+                          onClick={(e) => addItemToCart(item)}
+                          className='btn btn-warning me-2'>
+                            <span>{isInCart(item) ? "Added" : "Add to Cart"}</span>
+                          </button>
                           <button className='btn btn-warning px-2'>Add to cart</button>
                         </div>
                     </div>

@@ -1,16 +1,18 @@
 import React from 'react'
 import useAppContext from '../AppContext'
 import { Link } from 'react-router-dom';
+import useProductContext from './context/ProductContext';
 
 const Navbar = () => {
 
   const { loggedIn, logout } = useAppContext();
+  const { getCartItemsCount } = useProductContext();
 
   const showLoggedIn = () => {
     if (loggedIn) {
       return (
         <div className='d-flex'>
-          <button onClick={logout} className= "btn btn-outline-danger me-3" type="submit">
+          <button onClick={logout} className="btn btn-outline-danger me-3" type="submit">
             Logout
           </button>
         </div>
@@ -40,8 +42,8 @@ const Navbar = () => {
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
           <a className="navbar-brand p-4" href="#">
-           { <img src="https://t3.ftcdn.net/jpg/05/02/02/12/360_F_502021280_N2OFgvIWez0go7VN92TyBaOS97fZ4uGP.jpg" alt="" style={{height:70}} />}
-           
+            {<img src="https://t3.ftcdn.net/jpg/05/02/02/12/360_F_502021280_N2OFgvIWez0go7VN92TyBaOS97fZ4uGP.jpg" alt="" style={{ height: 70 }} />}
+
           </a>
           <button
             className="navbar-toggler"
@@ -63,7 +65,7 @@ const Navbar = () => {
               </li>
               <li className="nav-item">
                 <Link className="" to={"/ProductListing"}>
-                 Product
+                  Product
                 </Link>
               </li>
               {/* <li className="nav-item dropdown">
@@ -99,13 +101,19 @@ const Navbar = () => {
               </li> */}
               <li className="nav-item">
                 <Link className="" to={"/Contactus"}>
-                 Contact
+                  Contact
                 </Link>
               </li>
               <li className="nav-item">
                 <a className="" aria-disabled="true">
-               About
+                  About
                 </a>
+              </li>
+              <li className="nav-item">
+                <a href="">
+               <span>{getCartItemsCount()}<i className="bi bi-cart-check-fill"></i></span>   
+                </a>
+
               </li>
             </ul>
             {
