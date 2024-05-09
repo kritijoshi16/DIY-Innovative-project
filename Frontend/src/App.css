@@ -6,7 +6,7 @@
 .main{
 /*width: 1000px;
   /* background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(../src/assets/bg.jpg);*/
-  background-image: url(https://okcredit-blog-images-prod.storage.googleapis.com/2021/02/diy3.jpg);
+  background-image: url("C:\Users\KritiAdmin\DIY Innovative project\Frontend\src\assets\back-school-college.avif");
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -138,8 +138,8 @@ ul li a:hover{
 
 .content h1{
     font-family: 'Times New Roman';
-    font-size: 50px;
-    padding-left: 20px;
+    font-size: 60px;
+    padding-left: 30px;
     margin-top: 0%;
     letter-spacing: 2px;
     text-align: center;
