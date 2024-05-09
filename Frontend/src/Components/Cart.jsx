@@ -28,7 +28,7 @@ const Cart = () => {
                 <h3>Your Cart is Currently Empty!</h3>
                 <p className="text-muted">Before proceed to checkout you must add some products to your shopping cart. <br />You will fill a lot of interesting products on our "Product" page.</p>
                 <div class="d-grid gap-2 col-6 mx-auto">
-                    <Link to={"/ProductListing"} class="btn btn-primary" type="button">Return to shop</Link>
+                    <Link to={"/ProductListing"} class="bttn btn-primary " type="button">Return to shop</Link>
                    
                 </div>
             </div>

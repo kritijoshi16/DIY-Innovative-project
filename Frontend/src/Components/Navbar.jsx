@@ -1,4 +1,5 @@
 import React from 'react'
+import logo from "../assets/logo.jpg"
 import useAppContext from '../AppContext'
 import { Link } from 'react-router-dom';
 import useProductContext from './context/ProductContext';
@@ -43,7 +44,9 @@ const Navbar = () => {
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
           <a className="navbar-brand p-4" href="#">
-            {<img src="https://t3.ftcdn.net/jpg/05/02/02/12/360_F_502021280_N2OFgvIWez0go7VN92TyBaOS97fZ4uGP.jpg" alt="" style={{ height: 70 }} />}
+            {<img
+             src={logo} 
+             alt="navbar" style={{ height: 70 }} />}
 
           </a>
           <button
@@ -108,6 +111,16 @@ const Navbar = () => {
               <li className="nav-item">
                 <Link className="" to={"/Tutorial"}>
                   Tutorial
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="" to={"/ViewProduct"}>
+                  View
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="" to={"/Feedback"}>
+                  Feedback
                 </Link>
               </li>
               <li className="nav-item">
