@@ -23,7 +23,7 @@ const ProductListing = () => {
         return products.map((item) => (
 
             <div className="col-md-3 g-2">
-                <div className="card shadow"  >
+                <div className="cards shadow"  >
                     <img src={"http://localhost:5000/"+item.image} className="card-img-top p-3" style={{height:300}} />
                     <div className="card-body " style={{height:150}}>
                         <h3 className="card-title">{item.name}</h3>

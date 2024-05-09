@@ -297,10 +297,10 @@ ul li a:hover{
         border: 3px solid #fff;
         border-radius: 50%;
       }
-/* .cards{
-    height:700px;
+ .cards{
+   /* height:700px;*/
     background-color:beige;
-} */
+} 
 
 .Card{
     height:80%;
