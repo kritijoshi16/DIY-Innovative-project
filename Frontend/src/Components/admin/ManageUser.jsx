@@ -34,11 +34,12 @@ const manageuser = () => {
     const displayUsers =()=>{
         return Data.map((user)=>{
         return<tr>
-            <td>{user.name}</td>
+            <td>{user.firstname}</td>
+            <td>{user.lastname}</td>
             <td>{user.email}</td>
             <td>{user.password}</td>
             <td><button onClick={e => deleteUser(user._id)} className='btn btn-danger'>Delete</button></td>
-            <td><button className='btn btn-danger'>Update</button></td>
+           
             </tr>
         })
     }
@@ -54,7 +55,10 @@ const manageuser = () => {
             <thead>
                 <tr>
                     <th>
-                        Name
+                        FirstName
+                    </th>
+                    <th>
+                        LastName
                     </th>
                     <th>
                         Email

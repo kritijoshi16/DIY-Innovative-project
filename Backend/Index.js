@@ -5,7 +5,8 @@ const cors = require('cors');
 const userRouter = require('./Routers/User');
 const productRouter = require('./Routers/Product');
 const contactusRouter = require('./Routers/Contactus');
-const utilRouter = require('./Routers/util');
+const UtilRouter = require('./Routers/Utils')
+
 
 app.use(cors({
     origin: ['http://localhost:5173']
@@ -14,13 +15,11 @@ app.use(cors({
 // middleware
 app.use(express.json());
 app.use('/user', userRouter);
-
 app.use('/product', productRouter);
-
 app.use('/contactus', contactusRouter);
-app.use('/util', utilRouter);
+app.use('/util', UtilRouter);
 
-app.use(express.static("./static/uploads"));
+app.use(express.static('./static/uploads'))
 
 
 app.listen(port, () => {

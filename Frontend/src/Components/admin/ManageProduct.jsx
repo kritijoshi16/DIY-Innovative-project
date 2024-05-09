@@ -1,5 +1,6 @@
 import { enqueueSnackbar } from 'notistack'
 import React, {useState, useEffect} from 'react'
+import { Link } from 'react-router-dom'
 
 const ManageProduct = () => {
 
@@ -35,12 +36,16 @@ const ManageProduct = () => {
     const displayProducts =()=>{
         return Data.map((product)=>{
         return<tr>
+            <td>
+              <img src={"http://localhost:5000/" + product.image} alt="" style={{height:40}} />
+            </td>
+           
             <td>{product.name}</td>
             <td>{product.category}</td>
             <td>{product.price}</td>
             <td>{product.description}</td>
             <td><button onClick={e => deleteProduct(product._id)} className='btn btn-danger'>Delete</button></td>
-            <td><button className='btn btn-danger'>Update</button></td>
+            <td><Link to={`/admin/updateproduct/${product._id}`} className='btn btn-danger'>Update</Link></td>
             </tr>
         })
     }
@@ -55,6 +60,9 @@ const ManageProduct = () => {
         <table className='table'>
             <thead>
                 <tr>
+                    <th>
+                        Image
+                    </th>
                     <th>
                         Name
                     </th>

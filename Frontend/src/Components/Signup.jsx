@@ -62,13 +62,13 @@ const Signup = () => {
   return (
     <div>
       <section className="h-100"style={{ backgroundColor: "lightblue" }}>
-        <div className="container py-5 ">
+        <div className="container py-5 " style={{marginLeft:"200px"}}>
           <div className="row d-flex justify-content-center align-items-center h-100 gx-0">
             <div className="col-md-6 ">
-              <div className="card card-registration ">
+              <div className="card card-registration "  >
                 <form onSubmit={signupForm.handleSubmit}>
                   <div className="card-body p-md-5 text-black">
-                    <h3 className="mb-5 text-uppercase">Signup Form</h3>
+                    <h3 className="mb-5 text-uppercase fw-bold" style={{fontSize:"40px", fontFamily:"sans-serif"}}>Signup Form</h3>
                     <div className="row">
                       <div className="col-md-6 mb-4">
                         <div data-mdb-input-init="" className="form-outline">

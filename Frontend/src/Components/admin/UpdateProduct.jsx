@@ -37,7 +37,7 @@ const UpdateProduct = () => {
 
     if (res.status === 200) {
     //toast("Updated successfully")
-      navigate('/Product');
+      navigate('/admin/manageproduct');
     }
   };
 
