@@ -25,7 +25,7 @@ const Feedback = () => {
     },
     onSubmit: async (values, action) => {
       try {
-        const res = await fetch('http://localhost:5000/user/add', {
+        const res = await fetch('http://localhost:5000/feedback/add', {
           method: 'POST',
           body: JSON.stringify(values),
           headers: {
@@ -34,7 +34,7 @@ const Feedback = () => {
         });
 
         if (res.status === 200) {
-          enqueueSnackbar('Feedback successful', { variant: 'success' });
+          enqueueSnackbar('Feedback send successful', { variant: 'success' });
           action.resetForm();
         } else {
           const data = await res.json();
