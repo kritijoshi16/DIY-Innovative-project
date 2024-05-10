@@ -4,10 +4,11 @@ import * as Yup from 'yup';
 import { loadStripe } from '@stripe/stripe-js';
 import PaymentGateway from './PaymentGateway';
 import { Elements } from '@stripe/react-stripe-js';
-import useCartContext from '../../context/ProductContext';
+import useCartContext from "../context/ProductContext"
+
 
 import './Checkout.css';
-import useUserContext from '../../context/UserContext';
+// import useUserContext from '../../context/UserContext';
 
 const appearance = {
     theme: "day",
@@ -45,7 +46,7 @@ function Checkout() {
         };
         sessionStorage.setItem('shipping', JSON.stringify(shipping));
         // console.log(getCartTotal());
-        const res = await fetch('http://localhost:3000/create-payment-intent', {
+        const res = await fetch('http://localhost:5000/create-payment-intent', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

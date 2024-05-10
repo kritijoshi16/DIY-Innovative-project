@@ -84,7 +84,7 @@ const Cart = () => {
                                         <p ><span style={{ color: "teal", fontFamily: 'initial', marginInline: "5px" }} >Total:</span>{getCartTotal()}</p>
                                         <p><span style={{ color: "teal", fontFamily: 'initial', marginInline: "5px" }}>Items:</span>{getCartItemsCount()}</p>
                                         <button className='btn btn-outline-danger my-2' onClick={() => clearCart()}><i className="bi bi-archive "></i>Clear </button>
-                                        {/* <Link to="/checkout" className="btn btn-outline-warning ms-2 "><i className="bi bi-bag px-1" ></i>Buy Now</Link> */}
+                                        <Link to="/checkout" className="btn btn-outline-warning ms-2 "><i className="bi bi-bag px-1" ></i>Buy Now</Link>
                                     </div>
                                 </div>
                             </div>

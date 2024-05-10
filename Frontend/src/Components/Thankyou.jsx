@@ -4,7 +4,8 @@ import { IconCircleX } from '@tabler/icons-react';
 import { useSearchParams, Link } from 'react-router-dom'; // Assuming you're using react-router-dom for navigation
 // import Navbar from './Navbar';
 import { IconCircleCheck } from '@tabler/icons-react';
-import useProductContext from '../../context/ProductContext';
+import useProductContext from './context/ProductContext';
+
 // import useCartContext from '../Context/CartContext';
 
 const ThankYou = () => {
@@ -15,7 +16,7 @@ const ThankYou = () => {
 
     const savePayment = async () => {
         const paymentDetails = await retrievePaymentIntent();
-        const response = await fetch('http://localhost:3000/order/add', {
+        const response = await fetch('http://localhost:5000/order/add', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -38,7 +39,7 @@ const ThankYou = () => {
     };
 
     const retrievePaymentIntent = async () => {
-        const response = await fetch("http://localhost:3000/retrieve-payment-intent", {
+        const response = await fetch("http://localhost:5000/retrieve-payment-intent", {
             method: 'POST',
             body: JSON.stringify({ paymentIntentId: params.get('payment_intent') }),
             headers: {
@@ -74,7 +75,7 @@ const ThankYou = () => {
                                     <p style={{ fontSize: '18px' }}>Your order has been placed successfully.</p>
                                     <p style={{ fontSize: '18px' }}>We've sent a confirmation email to your email address.</p>
                                 </div>
-                                <Button variant='primary' style={{ marginTop: '20px' }} as={Link} to="/user/order">See Orders</Button>
+                                <Button variant='primary' style={{ marginTop: '20px' }} as={Link} to="/order">See Orders</Button>
                             </>
                             :
                             <>

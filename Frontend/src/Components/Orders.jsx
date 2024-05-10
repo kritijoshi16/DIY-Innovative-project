@@ -8,7 +8,7 @@ const OrderHistory = () => {
 
   const fetchPaymentHistory = async () => {
     setLoading(true);
-    const response = await fetch("http://localhost:3000/order/getbyuser", {
+    const response = await fetch("http://localhost:5000/order/getbyuser", {
       headers: {
         'x-auth-token': (JSON.parse(sessionStorage.getItem('user')))
       }

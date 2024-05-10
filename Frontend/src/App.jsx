@@ -20,6 +20,9 @@ import ViewProduct from './Components/ViewProduct'
 import Tutorial from './Components/Tutorial'
 import Cart from './Components/Cart'
 import { ProductProvider } from './Components/context/ProductContext'
+import Checkout from './Components/Checkout/Checkout'
+import ThankYou from './Components/Thankyou'
+import OrderHistory from './Components/Orders'
 
 
 const App = () => {
@@ -44,6 +47,10 @@ const App = () => {
         <Route path='/ViewProduct' element={<ViewProduct />} />
         <Route path='/Tutorial' element={<Tutorial />} />
         <Route path='/Cart' element={<Cart />} />
+
+        <Route path='checkout' element={<Checkout/>}/>
+        <Route path='thankyou' element={<ThankYou/>}/>
+        <Route path='order' element={<OrderHistory/>}/>
       
 
        <Route path='/admin' element={<Admin/>}>
