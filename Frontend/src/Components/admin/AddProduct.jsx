@@ -14,6 +14,7 @@ const AddProductSchema = Yup.object().shape({
 const AddProduct = () => {
 
   const [selFile, setSelFile] = useState('');
+  const [selVideos, setSelVideo] = useState('');
 
 
 
@@ -24,12 +25,14 @@ const AddProduct = () => {
       category: '',
       price: '',
       description: '',
-      image: ''
+      image: '',
+      video:''
     },
 
 
     onSubmit: async (values, action) => {
       values.image = selFile
+      values.video = selVideos
       console.log(values);
       const res = await fetch('http://localhost:5000/product/add', {
         method: 'POST',
@@ -66,6 +69,23 @@ const AddProduct = () => {
       }
     });
   };
+
+  const uploadVideo = (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    setSelVideo(file.name);
+    const fd = new FormData();
+    fd.append("myfile", file);
+    fetch("http://localhost:5000/util/uploadfile", {
+      method: "POST",
+      body: fd,
+    }).then((res) => {
+      if (res.status === 200) {
+        console.log("file uploaded");
+      }
+    });
+  };
+
   return (
     <div className='container'>
       <div className="col">
@@ -110,10 +130,17 @@ const AddProduct = () => {
                   value={productForm.values.description} />
               </div>
               <div className="form-group">
-                <label for='upload-image'>Upload File</label>
+                <label for='upload-image'>Upload Image</label>
 
                 <input type="file" className="form-control mb-4"
                   onChange={uploadFile}
+                />
+              </div>
+              <div className="form-group">
+                <label for='upload-video'>Upload Video</label>
+
+                <input type="file" className="form-control mb-4"
+                  onChange={uploadVideo}
                 />
               </div>
 

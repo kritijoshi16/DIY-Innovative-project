@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import about from '../assets/about.jpeg'
+import About from '../assets/About.jpg'
 
 const Home = () => {
   return (
@@ -36,7 +36,7 @@ const Home = () => {
         <img
           className="img-fluid rounded"
           loading="lazy"
-          src={about}
+          src={About}
           alt="about"
         />
       </div>
@@ -48,14 +48,15 @@ const Home = () => {
           <div className="col-12 col-xl-11">
             <h2 className="h1 mb-3">Who Are We?</h2>
             <p className="lead fs-4 text-secondary mb-3">
-              We help people to build incredible brands and superior products.
-              Our perspective is to furnish outstanding captivating services.
+            DIYSPARK is more than just a platform for DIY enthusiasts; it's a community-driven hub where creativity thrives, innovation flourishes, and imagination knows no bounds. Our passion lies in empowering individuals to embrace their inner maker and embark on DIY projects that spark joy, foster learning, and cultivate a sense of accomplishment.
+
+
             </p>
             <p className="mb-5">
-              Nullam gravida orci ac luctus molestie. Fusce finibus congue erat,
-              non aliquam magna tincidunt at. Aenean lacinia arcu ex, sed
-              pharetra nibh porta a. Curabitur vel consequat nibh, ac interdum
-              nisl. Nunc pulvinar nec massa vitae sollicitudin.
+            Through easy-to-follow tutorials, step-by-step guides, and creative ideas, DIYSPARK aims to spark your imagination and fuel your passion for crafting. We believe that everyone has the potential to be a maker, and we're here to support you every step of the way.
+Join us as we embark on a journey of creativity, exploration, and endless possibilities. Let's ignite the spark of DIY creativity together!
+
+
             </p>
             <div className="row gy-4 gy-md-0 gx-xxl-5X">
               <div className="col-12 col-md-6">
@@ -143,7 +144,7 @@ const Home = () => {
               <path d="M7.5 1.018a7 7 0 0 0-4.79 11.566L7.5 7.793V1.018zm1 0V7.5h6.482A7.001 7.001 0 0 0 8.5 1.018zM14.982 8.5H8.207l-4.79 4.79A7 7 0 0 0 14.982 8.5zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
             </svg>
           </div>
-          <h4 className="mb-3">Market Research</h4>
+          <h4 className="mb-3">Customized Gifts</h4>
           <p className="mb-3 text-secondary">
             Vestibulum bibendum, lorem a blandit lacinia, nisi velit posuere
             nisl, vel placerat magna mauris mollis maximus est.
@@ -179,7 +180,7 @@ const Home = () => {
               <path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z" />
             </svg>
           </div>
-          <h4 className="mb-3">Web Design</h4>
+          <h4 className="mb-3">Video Tutorials</h4>
           <p className="mb-3 text-secondary">
             Vestibulum bibendum, lorem a blandit lacinia, nisi velit posuere
             nisl, vel placerat magna mauris mollis maximus est.
@@ -214,7 +215,7 @@ const Home = () => {
               <path d="M8 0c-.787 0-1.292.592-1.572 1.151A4.347 4.347 0 0 0 6 3v3.691l-2 1V7.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.191l-1.17.585A1.5 1.5 0 0 0 0 10.618V12a.5.5 0 0 0 .582.493l1.631-.272.313.937a.5.5 0 0 0 .948 0l.405-1.214 2.21-.369.375 2.253-1.318 1.318A.5.5 0 0 0 5.5 16h5a.5.5 0 0 0 .354-.854l-1.318-1.318.375-2.253 2.21.369.405 1.214a.5.5 0 0 0 .948 0l.313-.937 1.63.272A.5.5 0 0 0 16 12v-1.382a1.5 1.5 0 0 0-.83-1.342L14 8.691V7.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v.191l-2-1V3c0-.568-.14-1.271-.428-1.849C9.292.591 8.787 0 8 0ZM7 3c0-.432.11-.979.322-1.401C7.542 1.159 7.787 1 8 1c.213 0 .458.158.678.599C8.889 2.02 9 2.569 9 3v4a.5.5 0 0 0 .276.447l5.448 2.724a.5.5 0 0 1 .276.447v.792l-5.418-.903a.5.5 0 0 0-.575.41l-.5 3a.5.5 0 0 0 .14.437l.646.646H6.707l.647-.646a.5.5 0 0 0 .14-.436l-.5-3a.5.5 0 0 0-.576-.411L1 11.41v-.792a.5.5 0 0 1 .276-.447l5.448-2.724A.5.5 0 0 0 7 7V3Z" />
             </svg>
           </div>
-          <h4 className="mb-3">SEO Services</h4>
+          <h4 className="mb-3">Craft Making Items</h4>
           <p className="mb-3 text-secondary">
             Vestibulum bibendum, lorem a blandit lacinia, nisi velit posuere
             nisl, vel placerat magna mauris mollis maximus est.
