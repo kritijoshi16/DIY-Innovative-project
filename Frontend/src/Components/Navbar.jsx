@@ -113,21 +113,21 @@ const Navbar = () => {
                   Tutorial
                 </Link>
               </li>
-              <li className="nav-item">
+              {/*<li className="nav-item">
                 <Link className="" to={"/ViewProduct"}>
                   View
                 </Link>
-              </li>
+            </li>*/}
               <li className="nav-item">
                 <Link className="" to={"/Feedback"}>
                   Feedback
                 </Link>
               </li>
-              <li className="nav-item">
-                <a className="" aria-disabled="true">
+              {/*<li className="nav-item">
+              <a className="" aria-disabled="true">
                   About
                 </a>
-              </li>
+            </li>*/}
               <li className="nav-item">
                 <Link to={"/Cart"}>
                <span className='text-white'>{getCartItemsCount()}<i className="bi bi-cart-check-fill "></i></span>   
