@@ -10,7 +10,7 @@ const Home = () => {
         <h1>
             WELCOME TO <br />
           <span>DIYSpark</span> <br />
-          Course
+          
           </h1>
         
         <p className="par">
