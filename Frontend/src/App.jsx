@@ -26,6 +26,7 @@ import OrderHistory from './Components/Orders'
 
 
 
+
 const App = () => {
   return (
     <div>
@@ -45,7 +46,7 @@ const App = () => {
         <Route path='/Feedback' element={<Feedback />} />
       
         <Route path='/ForgetPassword' element={<ForgetPassword />} />
-        <Route path='/ViewProduct' element={<ViewProduct />} />
+        <Route path='/ViewProduct/:id' element={<ViewProduct />} />
         <Route path='/Tutorial' element={<Tutorial />} />
         <Route path='/Cart' element={<Cart />} />
 
