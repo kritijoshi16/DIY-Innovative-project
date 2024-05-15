@@ -1,75 +1,141 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import logo from "../assets/logo.jpg"
 import useAppContext from '../AppContext'
+import { Link } from 'react-router-dom';
+import useProductContext from './context/ProductContext';
+
+
 
 const Navbar = () => {
-  const {loggedIn, logout} = useAppContext();
-  console.log(loggedIn)
-  const showLoggedin = () => {
+
+  const { loggedIn, logout } = useAppContext();
+//   const { getCartItemsCount } = useProductContext();
+
+  const showLoggedIn = () => {
     if (loggedIn) {
       return (
-        <ul>
-          <li>
-            {/*<Link to='/Logout' />*/}
-            <button onClick={logout}>Logout</button>
-          </li>
-        </ul>
-      );
+        <div className='d-flex'>
+          <button onClick={logout} className="btn btn-outline-danger me-3" type="submit">
+            Logout
+          </button>
+        </div>
+      )
     } else {
-      <ul>
-        <li>
-          <Link to="/Signup">Signup</Link>
-        </li>
-        <li>
-          <Link to="/Login">Login</Link>
-        </li>
-      </ul>
+      return (
+        <form className="d-flex" role="search">
+          {/* <input
+        className="form-control me-2"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+      /> */}
+          <Link to={"/Signup"} className="btn m-3" type="submit">
+            Signup
+          </Link>
+          <Link to={"/Login"} className="btn m-3" type="submit">
+            Login
+          </Link>
+        </form>
+      )
+
     }
   }
   return (
-    <>
- 
-    <div className="navbar ">
-      <div className="icon">
-        <h2 className="logo">DIYSpark</h2>
-      </div>
-      <div className="menu">
-        <ul>
-          <li>
-            <Link to="/Home">HOME</Link>
-          </li>
-          {/*<li>
-            <Link to="/About">ABOUT</Link>
-  </li>*/}
-          <li>
-            <Link to="/AddProduct">PRODUCT</Link>
-          </li>
-          <li>
-            <Link to="/ProductListing">PRODUCTLIST</Link>
-          </li>
-          <li>
-            <Link to="/ContactUs">CONTACT</Link>
-          </li>
-          <li>{showLoggedin()}</li>
-            
-          
+    <div>
+      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <div className="container-fluid">
+          <a className="navbar-brand p-4" href="#">
+            {<img
+             src={logo} 
+             alt="navbar" style={{ height: 70 }} />}
 
-        </ul>
-      </div>
-      <div className="search">
-        <input
-          className="srch"
-          type="search"
-          name=""
-          placeholder="Type To text"
-        />
-        <a href="#">
-          {" "}
-          <button className="btn">Search</button>
-        </a>
-  </div>
+          </a>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon" />
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <Link className="" aria-current="page" to={"/"}>
+                  Home
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="" to={"/user/ProductListing"}>
+                  Product
+                </Link>
+              </li>
+              {/* <li className="nav-item dropdown">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Dropdown
+                </a>
+                <ul className="dropdown-menu">
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      Action
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      Another action
+                    </a>
+                  </li>
+                  <li>
+                    <hr className="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      Something else here
+                    </a>
+                  </li>
+                </ul>
+              </li> */}
+              <li className="nav-item">
+                <Link className="" to={"/Contactus"}>
+                  Contact
+                </Link>
+              </li>
+             
+           
+              <li className="nav-item">
+                <Link className="" to={"/Feedback"}>
+                  Feedback
+                </Link>
+              </li>
+              <li className="nav-item">
+              <Link className="" to={"/About"}>
+                  About
+                </Link>
+            </li>
+              {/* <li className="nav-item">
+                <Link to={"/Cart"}>
+               <span className='text-white'>{getCartItemsCount()}<i className="bi bi-cart-check-fill "></i></span>   
+                </Link>
+
+              </li> */}
+            </ul>
+            {
+              showLoggedIn()
+            }
+          </div>
+        </div>
+      </nav>
+
     </div>
-   </>
   )
 }
 

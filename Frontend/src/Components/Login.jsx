@@ -1,11 +1,18 @@
 import { useState } from 'react';
 // import SignupLoginImg from '../assets/loginimg.webp'
 //import { BiHide, BiShow } from "react-icons/bi";
+<<<<<<< HEAD
 import { Link, useNavigate } from 'react-router-dom';
+=======
+//import { Link, useNavigate } from 'react-router-dom';
+import login from "../assets/login.jpg"
+>>>>>>> e5b8c43d7955700bffbd23e27b19394aa1cd8f99
 import * as Yup from 'yup'
 import { useFormik } from 'formik'
 // import { toast } from 'react-hot-toast';
 import useAppContext from '../AppContext';
+import { Link, useNavigate } from 'react-router-dom';
+import Navbar from './Navbar';
 
 
 const LoginSchema = Yup.object().shape({
@@ -18,7 +25,7 @@ const LoginSchema = Yup.object().shape({
 })
 
 const Login = () => {
-    const { setLoggedin } = useAppContext();
+    const {setLoggedIn} = useAppContext();
 
     const navigate = useNavigate();
     //step1 : formik initialization
@@ -45,7 +52,7 @@ const Login = () => {
 
             if (res.status === 200) {
                 // toast('Login Success')
-                setLoggedin(true);
+                setLoggedIn(true);
                 const data = await res.json();
                 sessionStorage.setItem('isloggedin', true);
                 if (data.role === 'admin') {
@@ -53,7 +60,7 @@ const Login = () => {
                     navigate('/Admin');
                 } else {
                     sessionStorage.setItem('user', JSON.stringify(data));
-                    navigate('/Product');
+                    navigate('/');
                 }
 
             }
@@ -73,45 +80,98 @@ const Login = () => {
         setshowpassword(preve => !preve)
     }
 
-
-
-
-
     return (
         <>
-            <div className="container px-5">
-                <div className="row px-5">
-                    <div className=" col-md-6 p-5">
-                        <img src="https://media.istockphoto.com/id/1355237827/vector/woman-decorating-pot-working-at-ceramic-studio.jpg?s=612x612&w=0&k=20&c=jkCuvNGGRAItWcmgDKhzgFuQ6kl4DAa6EAcBAfNY_ek=" alt="" />
-                    </div>
-                    <div className="col-md-6">
-                        <div className="w-full max-w-sm bg-white m-auto  flex mt-5  flex-col ">
-                            {/* <h1 className="">Signup</h1> */}
-                            <div className="w-20 overflow-hidden rounded-full mt-5 drop-shadow-md shadow-md m-auto">
-                                {/* <img src={SignupLoginImg} alt="w-full" /> */}
-                            </div>
-                            <form className="w-full py-3 flex flex-col " onSubmit={LoginForm.handleSubmit} >
-
-                                <label htmlFor="email">Email</label>
-                                <input type="email" name="email" id="email" value={LoginForm.values.email} onChange={LoginForm.handleChange} className='mt-1 w-full mb-2 bg-slate-400 px-2 py-1 rounded  focus-within:outline-blue-300' />
-
-
-                                <label htmlFor="password">Password</label>
-                                <div className="flex  px-2 py-1 mb-2 mt-1 bg-slate-400 rounded outline-none  focus-within:outline-blue-300">
-                                    <input type={showpassword ? "text" : "password"} name="password" value={LoginForm.values.password} onChange={LoginForm.handleChange} id="password" className='bg-slate-400 border-none outline-none w-full ' />
-                                    <span className='flex text-xl cursor-pointer' onClick={handleShowPassword}>{showpassword ? <BiShow /> : <BiHide />}</span>
-                                </div>
-
-
-                                <button type="submit" className=" w-full max-w-[150px] block m-auto bg-red-600 hover:bg-red-700 cursor-pointer text-white text-xl font-medium  text-center py-1 rounded-full px-4 mt-4 ">Login</button>
-                            </form>
-                            <p className="text-sm mt-2">Don&apos;t have an account ? <Link to="/Signup" className='text-red-500 underline'>Signup</Link> </p>
-
-                        </div>
-                    </div>
-                </div>
-
+        <Navbar/>
+        <section className="vh-100" style={{ backgroundColor: "lightblue" }}>
+  <div className="container py-5 h-100">
+    <div className="row d-flex justify-content-center align-items-center h-100">
+      <div className="col col-xl-10">
+        <div className="card" style={{ borderRadius: "2rem" }}>
+          <div className="row g-0">
+            <div className="col-md-6 col-lg-5 d-none d-md-block">
+              <img
+                src={login}
+                alt="login form"
+                className="img-fluid"
+                style={{ borderRadius: "1rem 0 0 1rem",height:"100%",width:"900px" }}
+              />
             </div>
+            <div className="col-md-6 col-lg-7 d-flex align-items-center">
+              <div className="card-body p-4 p-lg-5 text-black">
+                <form onSubmit={LoginForm.handleSubmit}>
+                  <div className="d-flex align-items-center mb-3 pb-1">
+                    <i
+                      className="fas fa-cubes fa-2x me-3"
+                      style={{ color: "#ff6219" }}
+                    />
+                    <span className="h1 fw-bold mb-0">DIYSpark</span>
+                  </div>
+                  <h5
+                    className="fw-normal mb-3 pb-3"
+                    style={{ letterSpacing: 1 }}
+                  >
+                    Sign into your account
+                  </h5>
+                  <div data-mdb-input-init="" className="form-outline mb-4">
+                    <input
+                      type="email"
+                      id="email"
+                      value={LoginForm.values.email}
+                      onChange={LoginForm.handleChange}
+                      className="form-control form-control-lg"
+                    />
+                    <label className="form-label" htmlFor="form2Example17">
+                      Email address
+                    </label>
+                  </div>
+                  <div data-mdb-input-init="" className="form-outline mb-4">
+                    <input
+                      type="password"
+                      id="password"
+                      value={LoginForm.values.password}
+                      onChange={LoginForm.handleChange}
+                      className="form-control form-control-lg"
+                    />
+                    <label className="form-label" htmlFor="form2Example27">
+                      Password
+                    </label>
+                  </div>
+                  <div className="pt-1 mb-4">
+                    <button
+                      data-mdb-button-init=""
+                      data-mdb-ripple-init=""
+                      className="btn btn-warning btn-lg btn-block"
+                      type="submit"
+                    >
+                      Login
+                    </button>
+                  </div>
+                  <Link className="small text-muted" to="/ForgetPassword">
+                    Forgot password?
+                  </Link>
+                  <p className="mb-5 pb-lg-2" style={{ color: "#393f81" }}>
+                    Don't have an account?{" "}
+                    <Link to='/Signup' style={{ color: "#393f81" }}>
+                      Register here
+                    </Link>
+                  </p>
+                  <a href="#!" className="small text-muted">
+                    Terms of use.
+                  </a>
+                  <a href="#!" className="small text-muted">
+                    Privacy policy
+                  </a>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
         </>
     )
 }

@@ -4,9 +4,9 @@
 }
 
 .main{
-    width: 100%;
+/*width: 1000px;
   /* background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(../src/assets/bg.jpg);*/
-  background-image: url(https://okcredit-blog-images-prod.storage.googleapis.com/2021/02/diy3.jpg);
+  background-image: url("C:\Users\KritiAdmin\DIY Innovative project\Frontend\src\assets\back-school-college.avif");
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -16,8 +16,10 @@
 .navbar{
     width: 100%;
     height: 80px;
-   margin:auto;
-    background-color: #000;
+    margin:auto;
+    background-color: #131212;
+    color:white;
+    
     
 }
 
@@ -29,7 +31,7 @@
 
 .logo{
     color: #ff7200;
-    font-size: 35px;
+    font-size: 25px;
     font-family: Arial;
     padding-left: 20px;
     float: left;
@@ -45,7 +47,7 @@
 }
 
 ul{
-    float: left;
+    float: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,9 +55,9 @@ ul{
 
 ul li{
     list-style: none;
-    margin-left: 62px;
-    margin-top: 27px;
-    font-size: 14px;
+    margin-left: 30px;
+    margin-top: 17px;
+    font-size: 20px;
 }
 
 ul li a{
@@ -104,6 +106,7 @@ ul li a:hover{
     border-bottom-right-radius: 5px;
     transition: 0.2s ease;
     cursor: pointer;
+    
 }
 .btn:hover{
     color: #000;
@@ -135,8 +138,8 @@ ul li a:hover{
 
 .content h1{
     font-family: 'Times New Roman';
-    font-size: 50px;
-    padding-left: 20px;
+    font-size: 60px;
+    padding-left: 30px;
     margin-top: 0%;
     letter-spacing: 2px;
     text-align: center;
@@ -294,3 +297,22 @@ ul li a:hover{
         border: 3px solid #fff;
         border-radius: 50%;
       }
+ .cards{
+   /* height:700px;*/
+    background-color:beige;
+} 
+
+.Card{
+    height:90%;
+    background-color:beige;
+}
+.card-header h3{
+    align-items: center;
+}
+.CardS{
+    background-image: url("C:\Users\KritiAdmin\DIY Innovative project\Frontend\src\assets\handmade-wrapped.avif");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
