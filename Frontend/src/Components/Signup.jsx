@@ -60,7 +60,7 @@ const Signup = () => {  // step 1: formik initialization
           <div className="row d-flex justify-content-center align-items-center h-100">
             <div className="col ">
               <div className="card card-registration my-4">
-                <div className="row g-0">
+                <div className="row g-1  ">
                   <div className="col-xl-5 d-none d-xl-block">
                     <img
                       src="https://img.freepik.com/free-photo/young-child-making-diy-project-from-upcycled-materials_23-2149391054.jpg"
@@ -75,7 +75,7 @@ const Signup = () => {  // step 1: formik initialization
                     />
                   </div>
                   <form onSubmit={signupForm.handleSubmit}>
-                    <div className="col-xl-6">
+                    <div className="col-xl-6" style={{marginLeft:"40%"}}>
                       <div className="card-body p-md-5 text-black">
                         <h3 className="mb-5 text-uppercase"> Signup Form
                         </h3>

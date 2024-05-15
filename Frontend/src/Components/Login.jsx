@@ -1,6 +1,6 @@
 import { useState } from 'react';
 // import SignupLoginImg from '../assets/loginimg.webp'
-import { BiHide, BiShow } from "react-icons/bi";
+//import { BiHide, BiShow } from "react-icons/bi";
 import { Link, useNavigate } from 'react-router-dom';
 import * as Yup from 'yup'
 import { useFormik } from 'formik'
