@@ -4,7 +4,7 @@ import { IconCircleX } from '@tabler/icons-react';
 import { useSearchParams, Link } from 'react-router-dom'; // Assuming you're using react-router-dom for navigation
 // import Navbar from './Navbar';
 import { IconCircleCheck } from '@tabler/icons-react';
-import useProductContext from './context/ProductContext';
+import useProductContext from '../context/ProductContext';
 
 // import useCartContext from '../Context/CartContext';
 

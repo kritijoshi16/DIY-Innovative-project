@@ -1,15 +1,14 @@
 import React from 'react'
-import logo from "../assets/logo.jpg"
-import useAppContext from '../AppContext'
+import logo from "../../assets/logo.jpg"
+import useAppContext from '../../AppContext'
 import { Link } from 'react-router-dom';
-import useProductContext from './context/ProductContext';
-
+import useProductContext from '../context/ProductContext';
 
 
 const Navbar = () => {
 
   const { loggedIn, logout } = useAppContext();
-//   const { getCartItemsCount } = useProductContext();
+  const { getCartItemsCount } = useProductContext();
 
   const showLoggedIn = () => {
     if (loggedIn) {
@@ -69,7 +68,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="" to={"/user/ProductListing"}>
+                <Link className="" to={"/ProductListing"}>
                   Product
                 </Link>
               </li>
@@ -104,29 +103,25 @@ const Navbar = () => {
                   </li>
                 </ul>
               </li> */}
-              <li className="nav-item">
-                <Link className="" to={"/Contactus"}>
-                  Contact
-                </Link>
-              </li>
              
-           
               <li className="nav-item">
-                <Link className="" to={"/Feedback"}>
-                  Feedback
+                <Link className="" to={"/Tutorial"}>
+                  Tutorial
                 </Link>
               </li>
-              <li className="nav-item">
-              <Link className="" to={"/About"}>
-                  About
+              {/*<li className="nav-item">
+                <Link className="" to={"/ViewProduct"}>
+                  View
                 </Link>
-            </li>
-              {/* <li className="nav-item">
-                <Link to={"/Cart"}>
+            </li>*/}
+             
+            
+              <li className="nav-item">
+                <Link to={"/user/Cart"}>
                <span className='text-white'>{getCartItemsCount()}<i className="bi bi-cart-check-fill "></i></span>   
                 </Link>
 
-              </li> */}
+              </li>
             </ul>
             {
               showLoggedIn()

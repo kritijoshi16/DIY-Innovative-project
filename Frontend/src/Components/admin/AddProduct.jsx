@@ -25,6 +25,7 @@ const AddProduct = () => {
       category: '',
       price: '',
       description: '',
+      longdescription: '',
       image: '',
       video:''
     },
@@ -128,6 +129,14 @@ const AddProduct = () => {
                   id="description"
                   onChange={productForm.handleChange}
                   value={productForm.values.description} />
+              </div>
+              <div className="form-group">
+                <label>Long Description</label>
+                <span style={{ color: 'red', fontSize: '10' }}>{productForm.touched.longdescription && productForm.errors.longdescription}</span>
+                <input type="text" className="form-control mb-4"
+                  id="longdescription"
+                  onChange={productForm.handleChange}
+                  value={productForm.values.longdescription} />
               </div>
               <div className="form-group">
                 <label for='upload-image'>Upload Image</label>

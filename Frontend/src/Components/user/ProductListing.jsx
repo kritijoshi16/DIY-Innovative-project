@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import useProductContext from './context/ProductContext';
+import useProductContext from '../context/ProductContext';
 import { Link } from 'react-router-dom'
 
 const ProductListing = () => {
@@ -30,6 +30,7 @@ const ProductListing = () => {
                         <h3 className="card-title">{item.name}</h3>
                         <h5 className="card-title">{item.category}</h5>
                         <h5 className="card-title">{item.price}</h5>
+
                         {/* <p className="card-text">
                            {item.description}
                         </p> */}
@@ -44,7 +45,7 @@ const ProductListing = () => {
                           className='btn btn-warning me-2 px-2'>
                             <span>{isInCart(item) ? "Added" : "Add to Cart"}</span>
                           </button>
-                          <Link to={`/ViewProduct/+{item_id}`} ><button className='buton btn btn-primary'>View</button></Link>
+                          <Link to={"/ViewProduct/" + item._id} ><button className='buton btn btn-primary'>View</button></Link>
                         </div>
                     </div>
                 </div>

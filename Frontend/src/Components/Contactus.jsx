@@ -3,6 +3,7 @@ import DIY from "../assets/DIY.jpg"
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { enqueueSnackbar } from 'notistack';
+import Navbar from './Navbar';
 
 const ContactusSchema = Yup.object().shape({
   fullname: Yup.string()
@@ -51,7 +52,8 @@ const Contactus = () => {
   });
 
   return (
-    <div><>
+    <div>
+      <Navbar/><>
     {/* Contact 4 - Bootstrap Brain Component */}
     <section className="bg-light py-3 py-md-5">
       <div className="container">

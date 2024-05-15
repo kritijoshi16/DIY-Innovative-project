@@ -3,6 +3,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { enqueueSnackbar } from 'notistack';
 import { useNavigate } from 'react-router-dom';
+import Navbar from './Navbar';
 
 const SignupSchema = Yup.object().shape({
   firstname: Yup.string()
@@ -61,6 +62,7 @@ const Signup = () => {
 
   return (
     <div>
+      <Navbar/>
       <section className="h-100"style={{ backgroundColor: "lightblue" }}>
         <div className="container py-5 " style={{marginLeft:"200px"}}>
           <div className="row d-flex justify-content-center align-items-center h-100 gx-0">

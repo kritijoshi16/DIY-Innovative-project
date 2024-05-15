@@ -2,6 +2,7 @@ import React from 'react'
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { enqueueSnackbar } from 'notistack';
+import Navbar from './Navbar';
 
 const FeedbackSchema = Yup.object().shape({
   fullname: Yup.string()
@@ -49,7 +50,9 @@ const Feedback = () => {
   });
 
   return (
-    <div><div className="mx-0 mx-sm-auto">
+    <div>
+      <Navbar/>
+      <div className="mx-0 mx-sm-auto">
       <div className="CardS">
         <div className="card-header" style={{ backgroundColor: "lightblue" }}>
           <h5 className="card-title mt-2" style={{color: "darkblue",textAlign:"justify"}} id="exampleModalLabel">

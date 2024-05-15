@@ -8,6 +8,7 @@ import { useFormik } from 'formik'
 // import { toast } from 'react-hot-toast';
 import useAppContext from '../AppContext';
 import { Link, useNavigate } from 'react-router-dom';
+import Navbar from './Navbar';
 
 
 const LoginSchema = Yup.object().shape({
@@ -77,6 +78,7 @@ const Login = () => {
 
     return (
         <>
+        <Navbar/>
         <section className="vh-100" style={{ backgroundColor: "lightblue" }}>
   <div className="container py-5 h-100">
     <div className="row d-flex justify-content-center align-items-center h-100">
