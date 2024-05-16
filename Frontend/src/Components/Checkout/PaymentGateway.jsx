@@ -29,7 +29,7 @@ const PaymentGateway = ({email}) => {
             //Elements instance that was used to create the Payment Element
             elements,
             confirmParams: {
-                return_url: "http://localhost:5173/thankyou",
+                return_url: "http://localhost:5173/user/thankyou",
                 receipt_email: email,
                 
             },

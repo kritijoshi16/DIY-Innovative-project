@@ -80,9 +80,9 @@ const Sidebar = () => {
                         </ul>
                         <form className="d-flex" role="search">
                            
-                            <button className="btn btn-outline-danger me-3" type="submit">
+                            <Link classname="nav-link" to="/"><button className="btn btn-outline-danger me-3" type="submit">
                                Logout
-                            </button>
+                            </button></Link>
                         </form>
                     </div>
                 </div>

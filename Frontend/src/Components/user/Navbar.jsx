@@ -68,7 +68,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="" to={"/ProductListing"}>
+                <Link className="" to={"/user/ProductListing"}>
                   Product
                 </Link>
               </li>
@@ -105,7 +105,7 @@ const Navbar = () => {
               </li> */}
              
               <li className="nav-item">
-                <Link className="" to={"/Tutorial"}>
+                <Link className="" to={"/user/Tutorial"}>
                   Tutorial
                 </Link>
               </li>

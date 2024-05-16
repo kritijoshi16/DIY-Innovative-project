@@ -24,6 +24,7 @@ import Checkout from './Components/Checkout/Checkout'
 import ThankYou from './Components/user/Thankyou'
 import OrderHistory from './Components/user/Orders'
 import User from './Components/user'
+import Dashboard from './Components/admin/Dashboard'
 
 
 
@@ -65,6 +66,7 @@ const App = () => {
                   <Route path='updateproduct/:id' element={<UpdateProduct />} />
                   <Route path='ManageUser' element={<ManageUser />} />
                   <Route path='AddProduct' element={<AddProduct />} />
+                  <Route path='dashboard' element={<Dashboard />} />
 
 
                 </Route>

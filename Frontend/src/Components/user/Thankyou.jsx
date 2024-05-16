@@ -75,7 +75,7 @@ const ThankYou = () => {
                                     <p style={{ fontSize: '18px' }}>Your order has been placed successfully.</p>
                                     <p style={{ fontSize: '18px' }}>We've sent a confirmation email to your email address.</p>
                                 </div>
-                                <Button variant='primary' style={{ marginTop: '20px' }} as={Link} to="/order">See Orders</Button>
+                                <Button variant='primary' style={{ marginTop: '20px' }} as={Link} to="/user/order">See Orders</Button>
                             </>
                             :
                             <>

@@ -45,7 +45,7 @@ const ProductListing = () => {
                           className='btn btn-warning me-2 px-2'>
                             <span>{isInCart(item) ? "Added" : "Add to Cart"}</span>
                           </button>
-                          <Link to={"/ViewProduct/" + item._id} ><button className='buton btn btn-primary'>View</button></Link>
+                          <Link to={"/user/ViewProduct/" + item._id} ><button className='buton btn btn-primary'>View</button></Link>
                         </div>
                     </div>
                 </div>
