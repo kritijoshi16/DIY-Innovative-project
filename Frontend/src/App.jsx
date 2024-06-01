@@ -25,6 +25,7 @@ import ThankYou from './Components/user/Thankyou'
 import OrderHistory from './Components/user/Orders'
 import User from './Components/user'
 import Dashboard from './Components/admin/Dashboard'
+import About from './Components/About'
 
 
 
@@ -45,6 +46,7 @@ const App = () => {
 
                 <Route path='/Contactus' element={<Contactus />} />
                 <Route path='/Feedback' element={<Feedback />} />
+                <Route path='/About' element={<About />} />
 
 
                 <Route path='checkout' element={<Checkout />} />

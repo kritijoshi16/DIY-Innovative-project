@@ -68,7 +68,7 @@ const ProductListing = () => {
         <div>
             <header className='bg-body-tertiary' style={{ backgroundColor: "lightblue" }}>
                 <div className="container py-5">
-                    <p className='text-center fw-bold ' style={{ fontSize: "35px", fontFamily: "initial" }}>All Products</p>
+                    <p className='text-center fw-bold ' style={{ fontSize: "35px", fontFamily: "initial", color: "black" }}>ALL PRODUCTS</p>
                     <input onChange={applysearch} type='text' placeholder='Search Products' className='form-control w-75 m-auto' />
                 </div>
             </header>

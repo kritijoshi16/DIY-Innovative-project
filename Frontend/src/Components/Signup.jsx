@@ -4,6 +4,7 @@ import * as Yup from 'yup';
 import { enqueueSnackbar } from 'notistack';
 import { useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
+import useAppContext from '../AppContext';
 
 const SignupSchema = Yup.object().shape({
   firstname: Yup.string()
@@ -25,6 +26,8 @@ const SignupSchema = Yup.object().shape({
 
 const Signup = () => {
 
+  const {setLoggedIn, setCurrentUser} = useAppContext();
+
   const navigate = useNavigate();
 
   const signupForm = useFormik({
@@ -35,46 +38,52 @@ const Signup = () => {
       password: ''
     },
     onSubmit: async (values, action) => {
-      try {
-        const res = await fetch('http://localhost:5000/user/add', {
-          method: 'POST',
-          body: JSON.stringify(values),
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        });
-
-        if (res.status === 200) {
-          enqueueSnackbar('Signup successful', { variant: 'success' });
-          navigate("/Login")
-          action.resetForm();
-        } else {
-          const data = await res.json();
-          enqueueSnackbar(data.message || 'Signup failed', { variant: 'error' });
+      console.log(values);
+      const res = await fetch("http://localhost:5000/user/add",{
+        method:'POST',
+        body:JSON.stringify(values),
+        headers:{
+          "Content-Type":"application/json"
         }
-      } catch (error) {
-        console.error('Signup failed:', error);
-        enqueueSnackbar('Signup failed', { variant: 'error' });
+      });
+      console.log(res.status);
+      if(res.status === 200){
+        enqueueSnackbar("user registered successfully", {variant:"success"})
+        setLoggedIn(true);
+        const data = await res.json();
+        
+        if(data.role === "admin"){
+          sessionStorage.setItem("admin", JSON.stringify(data));
+          navigate("/admin/dashboard")
+        }else{
+          sessionStorage.setItem("user", JSON.stringify(data));
+          navigate("/user/ProductListing")
+        }
       }
-    },
-    validationSchema: SignupSchema
+      else if(res.status === 400){
+        enqueueSnackbar("something went wrong", {variant:"error"})
+      }
+    }
+
+   
+   
   });
 
   return (
     <div>
-      <Navbar/>
-      <section className="h-100"style={{ backgroundColor: "lightblue" }}>
-        <div className="container py-5 " style={{marginLeft:"200px"}}>
+      <Navbar />
+      <section className="h-100" style={{ backgroundColor: "lightblue" }}>
+        <div className="container py-5 " style={{ marginLeft: "200px" }}>
           <div className="row d-flex justify-content-center align-items-center h-100 gx-0">
             <div className="col-md-6 ">
               <div className="card card-registration "  >
                 <form onSubmit={signupForm.handleSubmit}>
                   <div className="card-body p-md-5 text-black">
-                    <h3 className="mb-5 text-uppercase fw-bold" style={{fontSize:"40px", fontFamily:"sans-serif"}}>Signup Form</h3>
+                    <h3 className="mb-5 text-uppercase fw-bold" style={{ fontSize: "40px", fontFamily: "sans-serif" }}>Signup Form</h3>
                     <div className="row">
                       <div className="col-md-6 mb-4">
                         <div data-mdb-input-init="" className="form-outline">
-                        <label className="form-label" htmlFor="firstname">
+                          <label className="form-label" htmlFor="firstname">
                             First name
                           </label>
                           <span style={{ color: 'red', fontSize: '10' }}>{signupForm.touched.firstname && signupForm.errors.firstname}</span>
@@ -87,7 +96,7 @@ const Signup = () => {
                       </div>
                       <div className="col-md-6 mb-4">
                         <div data-mdb-input-init="" className="form-outline">
-                        <label className="form-label" htmlFor="lastname">
+                          <label className="form-label" htmlFor="lastname">
                             Last name
                           </label>
                           <span style={{ color: 'red', fontSize: '10' }}>{signupForm.touched.lastname && signupForm.errors.lastname}</span>
@@ -95,12 +104,12 @@ const Signup = () => {
                             id="lastname"
                             onChange={signupForm.handleChange}
                             value={signupForm.values.lastname} />
-                          
+
                         </div>
                       </div>
                     </div>
                     <div data-mdb-input-init="" className="form-outline mb-4">
-                    <label className="form-label" htmlFor="email">
+                      <label className="form-label" htmlFor="email">
                         Email ID
                       </label>
                       <span style={{ color: 'red', fontSize: '10' }}>{signupForm.touched.email && signupForm.errors.email}</span>
@@ -112,7 +121,7 @@ const Signup = () => {
                     </div>
                     <div className="d-flex flex-row align-items-center mb-4">
                       <div data-mdb-input-init="" className="form-outline flex-fill mb-0">
-                      <label className="form-label" htmlFor="password">
+                        <label className="form-label" htmlFor="password">
                           Password
                         </label>
                         <span style={{ color: 'red', fontSize: '10' }}>{signupForm.touched.password && signupForm.errors.password}</span>
@@ -146,8 +155,8 @@ const Signup = () => {
                   borderBottomLeftRadius: ".25rem",
                   objectFit: 'cover',
                   objectPosition: "right",
-                  height:"80%",
-                  width:"60%",
+                  height: "80%",
+                  width: "60%",
                 }}
               />
             </div>

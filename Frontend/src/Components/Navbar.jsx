@@ -44,12 +44,12 @@ const Navbar = () => {
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
-          <a className="navbar-brand p-4" href="#">
+          <Link className="navbar-brand p-4" to="/admin/Dashboard">
             {<img
              src={logo} 
              alt="navbar" style={{ height: 70 }} />}
 
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -116,11 +116,11 @@ const Navbar = () => {
                   Feedback
                 </Link>
               </li>
-              <li className="nav-item">
+             {/* <li className="nav-item">
               <Link className="" to={"/About"}>
                   About
                 </Link>
-            </li>
+            </li>*/}
               {/* <li className="nav-item">
                 <Link to={"/Cart"}>
                <span className='text-white'>{getCartItemsCount()}<i className="bi bi-cart-check-fill "></i></span>   

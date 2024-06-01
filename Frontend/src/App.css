@@ -1,35 +1,35 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-.main{
-/*width: 1000px;
+.main {
+    /*width: 1000px;
   /* background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(../src/assets/bg.jpg);*/
-  background-image: url("C:\Users\KritiAdmin\DIY Innovative project\Frontend\src\assets\back-school-college.avif");
+    background-image: url("C:\Users\KritiAdmin\DIY Innovative project\Frontend\src\assets\back-school-college.avif");
     background-position: center;
     background-size: cover;
     height: 100vh;
-    
+
 }
 
-.navbar{
+.navbar {
     width: 100%;
     height: 80px;
     margin:auto;
     background-color: #131212;
-    color:white;
-    
-    
+    color: white;
+
+
 }
 
-.icon{
+.icon {
     width: 200px;
     float: left;
     height: 70px;
 }
 
-.logo{
+.logo {
     color: #ff7200;
     font-size: 25px;
     font-family: Arial;
@@ -39,28 +39,28 @@
     margin-top: 5px
 }
 
-.menu{
+.menu {
     width: 400px;
     float: left;
     height: 70px;
-  
+
 }
 
-ul{
+ul {
     float: center;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-ul li{
+ul li {
     list-style: none;
     margin-left: 30px;
     margin-top: 17px;
     font-size: 20px;
 }
 
-ul li a{
+ul li a {
     text-decoration: none;
     color: #fff;
     font-family: Arial;
@@ -68,17 +68,17 @@ ul li a{
     transition: 0.4s ease-in-out;
 }
 
-ul li a:hover{
+ul li a:hover {
     color: #ff7200;
 }
 
-.search{
+.search {
     width: 330px;
     float: left;
     margin-left: 270px;
 }
 
-.srch{
+.srch {
     font-family: 'Times New Roman';
     width: 200px;
     height: 40px;
@@ -94,7 +94,7 @@ ul li a:hover{
     border-top-left-radius: 5px;
 }
 
-.btn{
+.btn {
     width: 100px;
     height: 40px;
     background: #ff7200;
@@ -106,17 +106,18 @@ ul li a:hover{
     border-bottom-right-radius: 5px;
     transition: 0.2s ease;
     cursor: pointer;
-    
+
 }
-.btn:hover{
+
+.btn:hover {
     color: #000;
 }
 
-.btn:focus{
+.btn:focus {
     outline: none;
 }
 
-.srch:focus{
+.srch:focus {
     outline: none;
 }
 
@@ -128,7 +129,7 @@ ul li a:hover{
     position: relative;
 }
 
-.content .par{
+.content .par {
     padding-left: 20px;
     padding-bottom: 25px;
     font-family: Arial;
@@ -136,7 +137,7 @@ ul li a:hover{
     line-height: 30px;
 }
 
-.content h1{
+.content h1 {
     font-family: 'Times New Roman';
     font-size: 60px;
     padding-left: 30px;
@@ -146,7 +147,7 @@ ul li a:hover{
     justify-content: center;
 }
 
-.content .cn{
+.content .cn {
     width: 160px;
     height: 40px;
     background: #ff7200;
@@ -157,37 +158,37 @@ ul li a:hover{
     border-radius: 10px;
     cursor: pointer;
     transition: .4s ease;
-    
+
 }
 
-.content .cn a{
+.content .cn a {
     text-decoration: none;
     color: #000;
     transition: .3s ease;
 }
 
-.cn:hover{
+.cn:hover {
     background-color: #fff;
 }
 
-.content span{
+.content span {
     color: #ff7200;
     font-size: 65px
 }
 
-.form{
+.form {
     width: 250px;
     height: 380px;
-    background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8)50%, rgba(0, 0, 0, 0.8)50%);
     position: absolute;
     top: -20px;
     left: 870px;
-    transform: translate(0%,-5%);
+    transform: translate(0%, -5%);
     border-radius: 10px;
     padding: 25px;
 }
 
-.form h2{
+.form h2 {
     width: 220px;
     font-family: sans-serif;
     text-align: center;
@@ -199,7 +200,7 @@ ul li a:hover{
     padding: 8px;
 }
 
-.form input{
+.form input {
     width: 240px;
     height: 35px;
     background: transparent;
@@ -214,16 +215,16 @@ ul li a:hover{
     font-family: sans-serif;
 }
 
-.form input:focus{
+.form input:focus {
     outline: none;
 }
 
-::placeholder{
+::placeholder {
     color: #fff;
     font-family: Arial;
 }
 
-.btnn{
+.btnn {
     width: 240px;
     height: 40px;
     background: #ff7200;
@@ -235,42 +236,50 @@ ul li a:hover{
     color: #fff;
     transition: 0.4s ease;
 }
-.btnn:hover{
+
+.btnn:hover {
     background: #fff;
     color: #ff7200;
 }
-.btnn a{
+
+.btnn a {
     text-decoration: none;
     color: #000;
     font-weight: bold;
 }
-.form .link{
+
+.form .link {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 17px;
     padding-top: 20px;
     text-align: center;
 }
-.form .link a{
+
+.form .link a {
     text-decoration: none;
     color: #ff7200;
 }
-.liw{
+
+.liw {
     padding-top: 15px;
     padding-bottom: 10px;
     text-align: center;
 }
-.icons a{
+
+.icons a {
     text-decoration: none;
     color: #fff;
 }
-.icons ion-icon{
+
+.icons ion-icon {
     color: #fff;
     font-size: 30px;
     padding-left: 14px;
     padding-top: 5px;
     transition: 0.3s ease;
 }
-.icons ion-icon:hover{
+
+.icons ion-icon:hover {
     color: #ff7200;
 }
 
@@ -279,40 +288,85 @@ ul li a:hover{
     line-height: 2.15;
     padding-left: .75em;
     padding-right: .75em;
-    }
-    .card-registration .select-arrow {
-    top: 13px;
-    }
-    
-    .testimonial-card .card-up {
-        height: 120px;
-        overflow: hidden;
-        border-top-left-radius: 0.25rem;
-        border-top-right-radius: 0.25rem;
-      }
-      .testimonial-card .avatar {
-        width: 110px;
-        margin-top: -60px;
-        overflow: hidden;
-        border: 3px solid #fff;
-        border-radius: 50%;
-      }
- .cards{
-   /* height:700px;*/
-    background-color:beige;
-} 
-
-.Card{
-    height:90%;
-    background-color:beige;
 }
-.card-header h3{
+
+.card-registration .select-arrow {
+    top: 13px;
+}
+
+.testimonial-card .card-up {
+    height: 120px;
+    overflow: hidden;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
+.testimonial-card .avatar {
+    width: 110px;
+    margin-top: -60px;
+    overflow: hidden;
+    border: 3px solid #fff;
+    border-radius: 50%;
+}
+
+.cards {
+    /* height:700px;*/
+    background-color: beige;
+}
+
+.Card {
+    height: 90%;
+    background-color: beige;
+}
+
+.card-header h3 {
     align-items: center;
 }
-.CardS{
+
+.CardS {
     background-image: url("C:\Users\KritiAdmin\DIY Innovative project\Frontend\src\assets\handmade-wrapped.avif");
     background-position: center;
     background-size: cover;
     height: 100vh;
 }
 
+.dashboard {
+    width: 1200px;
+    height: auto;
+    color: #090909;
+    position: relative;
+}
+
+.dashboard h1 {
+    font-family: 'Times New Roman';
+    font-size: 60px;
+    padding-left: 30px;
+    margin-top: 0%;
+
+    letter-spacing: 2px;
+    text-align: center;
+    justify-content: center;
+}
+
+.dashboard span {
+    color: #ff7200;
+    font-size: 65px
+}
+
+/*}.dashboardmain {
+
+    background-image: url("C:\Users\KritiAdmin\DIY Innovative project\Frontend\src\assets\dashboardbg.avif");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+
+}*/
+
+.dashbttn {
+    width: 100px;
+    height: 50px;
+    background: rgb(14, 13, 13);
+    color: #fff;
+    border: 2px solid #928f8d;
+
+}
