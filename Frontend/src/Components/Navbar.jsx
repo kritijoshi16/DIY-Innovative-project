@@ -116,11 +116,11 @@ const Navbar = () => {
                   Feedback
                 </Link>
               </li>
-             {/* <li className="nav-item">
+              <li className="nav-item">
               <Link className="" to={"/About"}>
                   About
                 </Link>
-            </li>*/}
+            </li>
               {/* <li className="nav-item">
                 <Link to={"/Cart"}>
                <span className='text-white'>{getCartItemsCount()}<i className="bi bi-cart-check-fill "></i></span>   
