@@ -6,11 +6,23 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
+import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
+
 // import required modules
-import { Keyboard, Pagination, Navigation } from 'swiper/modules';
+import { Keyboard, EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+
+//import images
+import slideimage1 from '../assets/slideimage1.jpg'
+import slideimage2 from '../assets/slideimage2.jpg'
+import slideimage3 from '../assets/slideimage3.jpg'
+import slideimage4 from '../assets/slideimage4.jpg'
+import slideimage5 from '../assets/slideimage5.png'
+import slideimage6 from '../assets/slideimage6.jpeg'
+
+
 
 
 
@@ -19,57 +31,79 @@ const Home = () => {
 
   return (
 
-    <div>
+    <div classname="main" >
       <Navbar />
       <div>
+        <div className="containe ">
+          {/* <Fade bottom> */}
+          <h1 className='s1-txt-h1'>Welcome to<br />
+            <span>DIYSpark</span> <br />
+          </h1>
+          <p className='s1-txt-p'>"Where Hands Skillfully Craft Magnificent Wonders"</p>
+          {/* </Fade> */}
+          <Link to="/Contactus" className='btn btn-warning start-b'>Join Us</Link>
+        </div>
         <Swiper
+          effect={'coverflow'}
+          grabCursor={true}
+          centeredSlides={true}
+          loop={true}
           slidesPerView={1}
-          spaceBetween={50}
-          keyboard={{
-            enabled: true,
-          }}
-          pagination={{
+          cpverflowEffect={
+            {
+              rotate: 0,
+              stretch: 0,
+              depth: 100,
+              modifier: 2.5,
+            }}
+          navigation={{
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
             clickable: true,
           }}
-          navigation={true}
-          modules={[Keyboard, Pagination, Navigation]}
-          className="mySwiper"
-        >
-          <SwiperSlide className='slide1'>
-            <div className="containe d-flex justify-content-center">
-              {/* <Fade bottom> */}
-              <h1 className='s1-txt-h1'>Welcome to<br />
-                <span>DIYSpark</span> <br />
-              </h1>
-              <h1 className='s1-txt-h2'></h1>
-              <p className='s1-txt-p'>Where business takes flight!!</p>
-              {/* </Fade> */}
-              <Link to="/Contactus" className='btn btn-danger start-b'>Join Us</Link>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className='slide2'>
-            <div className="container d-flex justify-content-center">
-              {/* <Fade bottom> */}
-              <h1 className='s2-txt-h1'>We Prepare</h1>
-              <h1 className='s2-txt-h2'>startups for</h1>
-              <h1 className='s2-txt-h3'>accelerators</h1>
-              {/* </Fade> */}
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className='slide3'>
-            {/* <Fade bottom> */}
-            <h1 className='s3-txt-h1'>PROVIDING EXPERT SERVICES FOR</h1>
-            <h1 className='s3-txt-h2'>YOUR ENTREPRENEURIAL</h1>
-            <h1 className='s3-txt-h3'>JOURNEY !!!</h1>
-            {/* </Fade> */}
-          </SwiperSlide>
+          pagination={{ el: '.swiper-pagination', clickable: true }}
 
+          // install Swiper modules
+          modules={[Navigation, EffectCoverflow, Pagination]}
+          className="swiper_container"
+        >
+          <SwiperSlide>
+            <img src={slideimage1} alt="slideimage" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={slideimage2} alt="slideimage" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={slideimage3} alt="slideimage" />
+          </SwiperSlide>
+          <SwiperSlide>
+          <img src={slideimage4} alt="slideimage"/>
+          </SwiperSlide>
+          <SwiperSlide>
+          <img src={slideimage5} alt="slideimage"/>
+          </SwiperSlide>
+          <SwiperSlide>
+          <img src={slideimage6} alt="slideimage"/>
+          </SwiperSlide>
+          {/*<SwiperSlide>
+          <img src={slideimage7} alt="slideimage"/>
+          </SwiperSlide>*/}
+
+          <div className="slider-controler">
+            <div className="swiper-button-next slider-arrow">
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </div>
+            <div className="swiper-pagination"></div>
+
+          </div>
+
+          ...
         </Swiper>
 
 
 
       </div>
-      <section className="py-3 py-md-5 py-xl-8">
+      <section className=" py-3 py-md-5 py-xl-8">
 
         <div className="container" >
           <h1>About</h1>
