@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const ProductListing = () => {
     const [products, setProducts] = useState([])
     const [masterList, setMasterList] = useState([]);
-    const {addItemToCart, isInCart } = useProductContext();
+    const { addItemToCart, isInCart } = useProductContext();
 
     const fetchProducts = async () => {
         const res = await fetch('http://localhost:5000/product/getall')
@@ -14,6 +14,7 @@ const ProductListing = () => {
             const data = await res.json();
             console.log(data)
             setProducts(data)
+            setMasterList(data)
         }
     }
     useEffect(() => {
@@ -25,8 +26,8 @@ const ProductListing = () => {
 
             <div className="col-md-3 g-2">
                 <div className="cards shadow"  >
-                    <img src={"http://localhost:5000/"+item.image} className="card-img-top p-3" style={{height:300}} />
-                    <div className="card-body " style={{height:150}}>
+                    <img src={"http://localhost:5000/" + item.image} className="card-img-top p-3" style={{ height: 300 }} />
+                    <div className="card-body " style={{ height: 150 }}>
                         <h3 className="card-title">{item.name}</h3>
                         <h5 className="card-title">{item.category}</h5>
                         <h5 className="card-title">{item.price}</h5>
@@ -34,18 +35,18 @@ const ProductListing = () => {
                         {/* <p className="card-text">
                            {item.description}
                         </p> */}
-                       
-                        
+
+
                     </div>
                     <div className="card-footer">
-                    <div className='text-center'>
-                          <button
-                          disabled={isInCart(item)}
-                          onClick={(e) => addItemToCart(item)}
-                          className='btn btn-warning me-2 px-2'>
-                            <span>{isInCart(item) ? "Added" : "Add to Cart"}</span>
-                          </button>
-                          <Link to={"/user/ViewProduct/" + item._id} ><button className='buton btn btn-primary'>View</button></Link>
+                        <div className='text-center'>
+                            <button
+                                disabled={isInCart(item)}
+                                onClick={(e) => addItemToCart(item)}
+                                className='btn btn-warning me-2 px-2'>
+                                <span>{isInCart(item) ? "Added" : "Add to Cart"}</span>
+                            </button>
+                            <Link to={"/user/ViewProduct/" + item._id} ><button className='buton btn btn-primary'>View</button></Link>
                         </div>
                     </div>
                 </div>
@@ -56,20 +57,34 @@ const ProductListing = () => {
     }
 
     const applysearch = (e) => {
-        const inputText = e.target.value;
-
-        setProducts(masterList.filter((product) => {
-            return product.category.toLowerCase().includes(inputText.topLowerCase());
+        const value = e.target.value;
+        setProducts(masterList.filter((products) => {
+            return products.category.toLowerCase().includes(value.toLowerCase());
         }));
-
-
     }
+
+    const filterbyCategory = (category) => {
+        console.log(category)
+        const filtercategory = masterList.filter(cat => cat.category.toLowerCase().includes(category.toLowerCase()));
+        setProducts(filtercategory)
+    }
+
     return (
         <div>
             <header className='bg-body-tertiary' style={{ backgroundColor: "lightblue" }}>
                 <div className="container py-5">
                     <p className='text-center fw-bold ' style={{ fontSize: "35px", fontFamily: "initial", color: "black" }}>ALL PRODUCTS</p>
-                    <input onChange={applysearch} type='text' placeholder='Search Products' className='form-control w-75 m-auto' />
+                    <input onChange={applysearch} type='search' id='default-search' placeholder='Search Products' className='form-control w-75 m-auto' />
+                </div>
+                <div className='flex justify-evenly mt-5'>
+                    <button className="bg-transparent hover:bg-orange-700 text-white font-bold hover:text-white py-2 px-4 border border-black-500 hover:border-black rounded"
+                        id="showpieces" onClick={(e) => filterbyCategory("showpieces")}>
+                        Showpiece
+                    </button>
+                    <button className="bg-transparent hover:bg-orange-700 text-white font-bold hover:text-white py-2 px-4 border border-black-500 hover:border-black rounded"
+                        id="handmade items" onClick={(e) => filterbyCategory("handmadeitems")}>Handmade Items</button>
+                    <button className="bg-transparent hover:bg-orange-700 text-white font-bold hover:text-white py-2 px-4 border border-black-500 hover:border-black rounded"
+                        id="Watercontainers" onClick={(e) => filterbyCategory("WaterContainers")}>Water Container</button>
                 </div>
             </header>
 
