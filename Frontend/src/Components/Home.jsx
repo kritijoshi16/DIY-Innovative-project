@@ -2,8 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import About from '../assets/About.jpg'
 import Navbar from './Navbar'
+import gift from '../assets/gift.jpg'
+import craft from '../assets/craft.jpeg'
 
 const Home = () => {
+
 
   return (
 
@@ -25,7 +28,7 @@ const Home = () => {
       <section className=" py-3 py-md-5 py-xl-8">
 
         <div className="container" >
-          <h1>About</h1>
+          <h1>ABOUT</h1>
           <div className="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
 
             <div className="col-12 col-lg-6 col-xl-5">
@@ -116,7 +119,7 @@ const Home = () => {
           <div className="container">
             <div className="row justify-content-md-center">
               <div className="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
-                <h2 className="mb-4 display-5 text-center">Features</h2>
+                <h2 className="h1 mb-4 text-center">FEATURES</h2>
                 <p className="text-secondary mb-5 text-center">
                   Orci varius natoque penatibus et magnis dis parturient montes,
                   nascetur ridiculus mus. Pellentesque et neque id ligula mattis
@@ -128,76 +131,62 @@ const Home = () => {
           </div>
           <div className="container overflow-hidden">
             <div className="row gy-5 gx-md-4 gy-lg-0 gx-xxl-5 justify-content-center">
-              <div className="col-11 col-sm-6 col-lg-3">
-                <div className="badge bg-primary p-3 mb-4">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width={26}
-                    height={26}
-                    fill="currentColor"
-                    className="bi bi-pie-chart"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M7.5 1.018a7 7 0 0 0-4.79 11.566L7.5 7.793V1.018zm1 0V7.5h6.482A7.001 7.001 0 0 0 8.5 1.018zM14.982 8.5H8.207l-4.79 4.79A7 7 0 0 0 14.982 8.5zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
-                  </svg>
-                </div>
-                <h4 className="mb-3">Customized Gifts</h4>
-                <p className="mb-3 text-secondary">
-                  Vestibulum bibendum, lorem a blandit lacinia, nisi velit posuere
-                  nisl, vel placerat magna mauris mollis maximus est.
-                </p>
-                <a href="#!" className="fw-bold text-decoration-none link-primary">
-                  Learn More
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width={16}
-                    height={16}
-                    fill="currentColor"
-                    className="bi bi-arrow-right-short"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+              <div className="card " >
+                <div
+                  className="bg-image hover-overlay"
+                  data-mdb-ripple-init=""
+                  data-mdb-ripple-color="light"
+                >
+                  <img
+                    src={gift}
+                    className="img-fluid"
+                    style={{ height: 230 }}
+                  />
+                  <a href="#!">
+                    <div
+                      className="mask"
+                      style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
                     />
-                  </svg>
-                </a>
+                  </a>
+                </div>
+                <div className="card-body">
+                  <h5 className="card-title">Customized Gifts</h5>
+                  <p className="card-text" style={{ width: 250 }}>
+                    Some quick example text to build on the card
+                    title and make up the bulk of
+                    the card's content.
+                  </p>
+                </div>
+
               </div>
-              <div className="col-11 col-sm-6 col-lg-3">
-                <div className="badge bg-primary p-3 mb-4">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width={26}
-                    height={26}
-                    fill="currentColor"
-                    className="bi bi-aspect-ratio"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z" />
-                    <path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z" />
-                  </svg>
-                </div>
-                <h4 className="mb-3">Video Tutorials</h4>
-                <p className="mb-3 text-secondary">
-                  Vestibulum bibendum, lorem a blandit lacinia, nisi velit posuere
-                  nisl, vel placerat magna mauris mollis maximus est.
-                </p>
-                <a href="#!" className="fw-bold text-decoration-none link-primary">
-                  Learn More
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width={16}
-                    height={16}
-                    fill="currentColor"
-                    className="bi bi-arrow-right-short"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+              <div className="card" >
+                <div
+                  className="bg-image hover-overlay"
+                  data-mdb-ripple-init=""
+                  data-mdb-ripple-color="light"
+                >
+                  <img
+                    src={craft}
+                    className="img-fluid"
+                    style={{ height: 250 }}
+                  />
+                  <a href="#!">
+                    <div
+                      className="mask"
+                      style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
                     />
-                  </svg>
-                </a>
+                  </a>
+                </div>
+
+
+                <div className="card-body">
+                  <h5 className="card-title">Craft Making</h5>
+                  <p className="card-text" style={{ width: 250 }}>
+                    Some quick example text to build on the card
+                    title and make up the bulk of
+                    the card's content.
+                  </p>
+                </div>
               </div>
               <div className="col-11 col-sm-6 col-lg-3">
                 <div className="badge bg-primary p-3 mb-4">
@@ -248,6 +237,8 @@ const Home = () => {
                     <path d="M6.5 0a.5.5 0 0 0 0 1H7v1.07a7.001 7.001 0 0 0-3.273 12.474l-.602.602a.5.5 0 0 0 .707.708l.746-.746A6.97 6.97 0 0 0 8 16a6.97 6.97 0 0 0 3.422-.892l.746.746a.5.5 0 0 0 .707-.708l-.601-.602A7.001 7.001 0 0 0 9 2.07V1h.5a.5.5 0 0 0 0-1h-3zm1.038 3.018a6.093 6.093 0 0 1 .924 0 6 6 0 1 1-.924 0zM0 3.5c0 .753.333 1.429.86 1.887A8.035 8.035 0 0 1 4.387 1.86 2.5 2.5 0 0 0 0 3.5zM13.5 1c-.753 0-1.429.333-1.887.86a8.035 8.035 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1z" />
                   </svg>
                 </div>
+
+                
                 <h4 className="mb-3">Hands-on Experience</h4>
                 <p className="mb-3 text-secondary">
                   This typically require hands-on work, which can range from basic crafting to more advanced construction or technical skills. This hands-on experience can be both educational and rewarding.
@@ -279,7 +270,7 @@ const Home = () => {
       <section>
         <div className="row d-flex justify-content-center">
           <div className="col-md-10 col-xl-8 text-center">
-            <h3 className="mb-4">FEEDBACK</h3>
+            <h3 className="h1 mb-4">FEEDBACK</h3>
             <p className="mb-4 pb-2 mb-md-5 pb-md-0">
               DIYSpark: Where imagination meets craftsmanship, empowering you to bring your creative visions to life, one project at a time!
 
@@ -449,7 +440,7 @@ const Home = () => {
                       />
                       <p>
                         DIYSpark: "Where imagination meets practicality" ;
-                        offering a vast collection of inventive DIY projects, DIY items and tutorials. 
+                        offering a vast collection of inventive DIY projects, DIY items and tutorials.
                       </p>
                     </div>
                     {/* Grid column */}

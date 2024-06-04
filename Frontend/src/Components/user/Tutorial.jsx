@@ -100,7 +100,7 @@ const Tutorial = () => {
     const inputText = e.target.value;
 
     setTutorials(masterList.filter((tutorial) => {
-      return tutorial.category.toLowerCase().includes(inputText.topLowerCase());
+      return tutorial.category.toLowerCase().includes(inputText.toLowerCase());
     }));
 
 
