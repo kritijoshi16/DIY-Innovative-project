@@ -13,6 +13,7 @@ const Tutorial = () => {
       const data = await res.json();
       console.log(data)
       setTutorials(data)
+      setMasterList(data)
     }
   }
   useEffect(() => {
@@ -98,7 +99,6 @@ const Tutorial = () => {
 
   const applysearch = (e) => {
     const inputText = e.target.value;
-
     setTutorials(masterList.filter((tutorial) => {
       return tutorial.category.toLowerCase().includes(inputText.toLowerCase());
     }));
@@ -110,7 +110,7 @@ const Tutorial = () => {
       <header className='bg-body-tertiary' style={{ backgroundColor: "lightblue" }}>
         <div className="container py-5">
           <p className='text-center fw-bold ' style={{ fontSize: "35px", fontFamily: "initial" }}>ALL TUTORIALS</p>
-          <input onChange={applysearch} type='text' placeholder='Search Videos' className='form-control w-75 m-auto' />
+          <input onChange={applysearch} type='search' placeholder='Search Videos' className='form-control w-75 m-auto' />
         </div>
       </header>
 
