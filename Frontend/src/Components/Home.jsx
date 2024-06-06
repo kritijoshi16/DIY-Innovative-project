@@ -4,6 +4,8 @@ import About from '../assets/About.jpg'
 import Navbar from './Navbar'
 import gift from '../assets/gift.jpg'
 import craft from '../assets/craft.jpeg'
+import paper from '../assets/paper.jpeg'
+import homedecor from '../assets/homedecor.jpg'
 
 const Home = () => {
 
@@ -25,113 +27,25 @@ const Home = () => {
 
 
       </div>
-      <section className=" py-3 py-md-5 py-xl-8">
 
-        <div className="container" >
-          <h1>ABOUT</h1>
-          <div className="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
-
-            <div className="col-12 col-lg-6 col-xl-5">
-              <img
-                className="img-fluid rounded"
-                loading="lazy"
-                src={About}
-                alt="about"
-              />
-              {/* <video class="video" src="aboutvdo.mp4" alt="about"autoplay loop muted></video>*/}
-            </div>
-
-            <div className="col-12 col-lg-6 col-xl-7">
-
-              <div className="row justify-content-xl-center">
-
-                <div className="col-12 col-xl-11">
-                  <h2 className="h1 mb-3">Who Are We?</h2>
-                  <p className="lead fs-4 text-secondary mb-3">
-                    DIYSPARK is more than just a platform for DIY enthusiasts; it's a community-driven hub where creativity thrives, innovation flourishes, and imagination knows no bounds. Our passion lies in empowering individuals to embrace their inner maker and embark on DIY projects that spark joy, foster learning, and cultivate a sense of accomplishment.
-
-
-                  </p>
-                  <p className="mb-5">
-                    Through easy-to-follow tutorials, step-by-step guides, and creative ideas, DIYSPARK aims to spark your imagination and fuel your passion for crafting. We believe that everyone has the potential to be a maker, and we're here to support you every step of the way.
-                    Join us as we embark on a journey of creativity, exploration, and endless possibilities. Let's ignite the spark of DIY creativity together!
-
-
-                  </p>
-                  <div className="row gy-4 gy-md-0 gx-xxl-5X">
-                    <div className="col-12 col-md-6">
-                      <div className="d-flex">
-                        <div className="me-4 text-primary">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width={32}
-                            height={32}
-                            fill="currentColor"
-                            className="bi bi-gear-fill"
-                            viewBox="0 0 16 16"
-                          >
-                            <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
-                          </svg>
-                        </div>
-                        <div>
-                          <h4 className="mb-3">Versatile Brand</h4>
-                          <p className="text-secondary mb-0">
-                            We are crafting a digital method that subsists life across
-                            all mediums.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-12 col-md-6">
-                      <div className="d-flex">
-                        <div className="me-4 text-primary">
-
-                          <svg
-                            xmlns="https://tse3.mm.bing.net/th/id/OIP.VQ9avxbnf1oK8c1PGQTsoQHaFD?w=227&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
-                            width={32}
-                            height={32}
-                            fill="currentColor"
-                            className="bi bi-fire"
-                            viewBox="0 0 16 16"
-                          >
-                            <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z" />
-                          </svg>
-                        </div>
-                        <div>
-                          <h4 className="mb-3">Digital Agency</h4>
-                          <p className="text-secondary mb-0">
-                            We believe in innovation by merging primary with elaborate
-                            ideas.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <>
         <section className="py-5 py-xl-8">
           <div className="container">
             <div className="row justify-content-md-center">
               <div className="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
-                <h2 className="h1 mb-4 text-center">FEATURES</h2>
-                <p className="text-secondary mb-5 text-center">
-                  Orci varius natoque penatibus et magnis dis parturient montes,
-                  nascetur ridiculus mus. Pellentesque et neque id ligula mattis
-                  commodo.
+                <h2 className="h1 mb-4 text-center" style={{ color: "blue"}}>FEATURES</h2>
+                <p className="h5 mb-5 text-center" style={{ color: "purple"}}>
+                  Enjoy premium tools and materials designed to make your crafting experience seamless and enjoyable.
                 </p>
                 <hr className="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle" />
               </div>
             </div>
           </div>
+
           <div className="container overflow-hidden">
             <div className="row gy-5 gx-md-4 gy-lg-0 gx-xxl-5 justify-content-center">
-              <div className="card " >
+              <div className="card col-md-3 g-2 " >
                 <div
                   className="bg-image hover-overlay"
                   data-mdb-ripple-init=""
@@ -140,7 +54,7 @@ const Home = () => {
                   <img
                     src={gift}
                     className="img-fluid"
-                    style={{ height: 230 }}
+                    style={{ height: 250, width: "300px" }}
                   />
                   <a href="#!">
                     <div
@@ -150,16 +64,14 @@ const Home = () => {
                   </a>
                 </div>
                 <div className="card-body">
-                  <h5 className="card-title">Customized Gifts</h5>
-                  <p className="card-text" style={{ width: 250 }}>
-                    Some quick example text to build on the card
-                    title and make up the bulk of
-                    the card's content.
+                  <h5 className=" mb-3 card-title" style={{ color: "purple"}}>Customized Gifts</h5>
+                  <p className="card-text" style={{ width: 290, color: "darkblue" }}>
+                    Make every occasion special with our exquisite range of customized gifts. Thoughtfully designed and personalized to reflect the recipient's unique personality and style, our gifts are perfect for creating unforgettable memories and heartfelt connections.
                   </p>
                 </div>
-
               </div>
-              <div className="card" >
+
+              <div className="card col-md-3 g-2" >
                 <div
                   className="bg-image hover-overlay"
                   data-mdb-ripple-init=""
@@ -168,7 +80,7 @@ const Home = () => {
                   <img
                     src={craft}
                     className="img-fluid"
-                    style={{ height: 250 }}
+                    style={{ height: 250, width: "300px" }}
                   />
                   <a href="#!">
                     <div
@@ -178,89 +90,64 @@ const Home = () => {
                   </a>
                 </div>
 
-
                 <div className="card-body">
-                  <h5 className="card-title">Craft Making</h5>
-                  <p className="card-text" style={{ width: 250 }}>
-                    Some quick example text to build on the card
-                    title and make up the bulk of
-                    the card's content.
+                  <h5 className="mb-3 card-title" style={{ color: "purple"}}>Craft Making Kit</h5>
+                  <p className="card-text" style={{ width: 290, color: "darkblue" }}>
+                    Dive into the enchanting world of craft making, where imagination knows no bounds & every creation tells a story. Whether you're an experienced artisan or a beginner, our craft making supplies and kits provide everything you need to bring your creative visions to life.
                   </p>
                 </div>
               </div>
-              <div className="col-11 col-sm-6 col-lg-3">
-                <div className="badge bg-primary p-3 mb-4">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width={26}
-                    height={26}
-                    fill="currentColor"
-                    className="bi bi-airplane-engines"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M8 0c-.787 0-1.292.592-1.572 1.151A4.347 4.347 0 0 0 6 3v3.691l-2 1V7.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.191l-1.17.585A1.5 1.5 0 0 0 0 10.618V12a.5.5 0 0 0 .582.493l1.631-.272.313.937a.5.5 0 0 0 .948 0l.405-1.214 2.21-.369.375 2.253-1.318 1.318A.5.5 0 0 0 5.5 16h5a.5.5 0 0 0 .354-.854l-1.318-1.318.375-2.253 2.21.369.405 1.214a.5.5 0 0 0 .948 0l.313-.937 1.63.272A.5.5 0 0 0 16 12v-1.382a1.5 1.5 0 0 0-.83-1.342L14 8.691V7.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v.191l-2-1V3c0-.568-.14-1.271-.428-1.849C9.292.591 8.787 0 8 0ZM7 3c0-.432.11-.979.322-1.401C7.542 1.159 7.787 1 8 1c.213 0 .458.158.678.599C8.889 2.02 9 2.569 9 3v4a.5.5 0 0 0 .276.447l5.448 2.724a.5.5 0 0 1 .276.447v.792l-5.418-.903a.5.5 0 0 0-.575.41l-.5 3a.5.5 0 0 0 .14.437l.646.646H6.707l.647-.646a.5.5 0 0 0 .14-.436l-.5-3a.5.5 0 0 0-.576-.411L1 11.41v-.792a.5.5 0 0 1 .276-.447l5.448-2.724A.5.5 0 0 0 7 7V3Z" />
-                  </svg>
-                </div>
-                <h4 className="mb-3">Craft Making Items</h4>
-                <p className="mb-3 text-secondary">
-                  Vestibulum bibendum, lorem a blandit lacinia, nisi velit posuere
-                  nisl, vel placerat magna mauris mollis maximus est.
-                </p>
-                <a href="#!" className="fw-bold text-decoration-none link-primary">
-                  Learn More
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width={16}
-                    height={16}
-                    fill="currentColor"
-                    className="bi bi-arrow-right-short"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+
+              <div className="card col-md-3 g-2" >
+                <div
+                  className="bg-image hover-overlay"
+                  data-mdb-ripple-init=""
+                  data-mdb-ripple-color="light"
+                >
+                  <img
+                    src={paper}
+                    className="img-fluid"
+                    style={{ height: 250, width: "300px" }}
+                  />
+                  <a href="#!">
+                    <div
+                      className="mask"
+                      style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
                     />
-                  </svg>
-                </a>
+                  </a>
+                </div>
+                <div className="card-body">
+                  <h5 className="mb-3 card-title" style={{ color: "purple"}}>Handy Paper work</h5>
+                  <p className="card-text" style={{ width: 290, color: "darkblue" }}>
+                    Discover the perfect blend of functionality, sustainability, and style with our premium paper products. Whether you're looking for stationery, journals, or decorative paper, our collection offers something for everyone, crafted & designed to inspire.
+                  </p>
+                </div>
               </div>
-              <div className="col-11 col-sm-6 col-lg-3">
-                <div className="badge bg-primary p-3 mb-4">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width={26}
-                    height={26}
-                    fill="currentColor"
-                    className="bi bi-alarm"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M8.5 5.5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9V5.5z" />
-                    <path d="M6.5 0a.5.5 0 0 0 0 1H7v1.07a7.001 7.001 0 0 0-3.273 12.474l-.602.602a.5.5 0 0 0 .707.708l.746-.746A6.97 6.97 0 0 0 8 16a6.97 6.97 0 0 0 3.422-.892l.746.746a.5.5 0 0 0 .707-.708l-.601-.602A7.001 7.001 0 0 0 9 2.07V1h.5a.5.5 0 0 0 0-1h-3zm1.038 3.018a6.093 6.093 0 0 1 .924 0 6 6 0 1 1-.924 0zM0 3.5c0 .753.333 1.429.86 1.887A8.035 8.035 0 0 1 4.387 1.86 2.5 2.5 0 0 0 0 3.5zM13.5 1c-.753 0-1.429.333-1.887.86a8.035 8.035 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1z" />
-                  </svg>
-                </div>
 
-                
-                <h4 className="mb-3">Hands-on Experience</h4>
-                <p className="mb-3 text-secondary">
-                  This typically require hands-on work, which can range from basic crafting to more advanced construction or technical skills. This hands-on experience can be both educational and rewarding.
-
-
-                </p>
-                <a href="#!" className="fw-bold text-decoration-none link-primary">
-                  Learn More
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width={16}
-                    height={16}
-                    fill="currentColor"
-                    className="bi bi-arrow-right-short"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+              <div className="card col-md-3 g-2" >
+                <div
+                  className="bg-image hover-overlay"
+                  data-mdb-ripple-init=""
+                  data-mdb-ripple-color="light"
+                >
+                  <img
+                    src={homedecor}
+                    className="img-fluid"
+                    style={{ height: 250, width: "300px" }}
+                  />
+                  <a href="#!">
+                    <div
+                      className="mask"
+                      style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
                     />
-                  </svg>
-                </a>
+                  </a>
+                </div>
+                <div className="card-body">
+                  <h5 className="mb-3 card-title" style={{ color: "purple"}}>Home Decor Products</h5>
+                  <p className="card-text" style={{ width: 290, color: "darkblue" }}>
+                    Elevate your living space with our curated collection of home decor. Whether you're looking to add a touch of elegance, a splash of color, or a cozy atmosphere, our unique pieces are designed to reflect your personal style and create a home you love.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -270,8 +157,8 @@ const Home = () => {
       <section>
         <div className="row d-flex justify-content-center">
           <div className="col-md-10 col-xl-8 text-center">
-            <h3 className="h1 mb-4">FEEDBACK</h3>
-            <p className="mb-4 pb-2 mb-md-5 pb-md-0">
+            <h3 className="h1 mb-4" style={{ color: "blue"}}>FEEDBACK</h3>
+            <p className="h5 mb-4 pb-2 mb-md-5 pb-md-0" style={{ color: "purple"}}>
               DIYSpark: Where imagination meets craftsmanship, empowering you to bring your creative visions to life, one project at a time!
 
             </p>
@@ -340,6 +227,7 @@ const Home = () => {
         </div>
       </section>
       <br></br>
+      <br></br>
       <>
 
         <>
@@ -355,7 +243,7 @@ const Home = () => {
                 style={{ backgroundColor: "#6351ce" }}
               >
                 {/* Left */}
-                <div className="me-5">
+                <div className="me-5" style={{ color: "darkyellow"}}>
                   <span>Get connected with us on social networks:</span>
                 </div>
                 {/* Left */}
@@ -483,24 +371,27 @@ const Home = () => {
                         style={{ width: 60, backgroundColor: "#7c4dff", height: 2 }}
                       />
                       <p>
-                        <a href="#!" className="text-white">
-                          Your Account
-                        </a>
+                      <Link to={"/Login"} style={{ color: "beige"}}>
+                          LOGIN
+                        </Link>
                       </p>
                       <p>
-                        <a href="#!" className="text-white">
-                          Become an Affiliate
-                        </a>
+                      <Link to={"/Signup"} style={{ color: "beige"}}>
+                          SIGNUP
+                        </Link>
+                       
                       </p>
                       <p>
-                        <a href="#!" className="text-white">
-                          Shipping Rates
-                        </a>
+                      <Link to={"/Contactus"} style={{ color: "beige"}}>
+                          CONTACT
+                        </Link>
+                        
                       </p>
                       <p>
-                        <a href="#!" className="text-white">
-                          Help
-                        </a>
+                      <Link to={"/Feedback"} style={{ color: "beige"}}>
+                          FEEDBACK
+                        </Link>
+                        
                       </p>
                     </div>
                     {/* Grid column */}
@@ -526,7 +417,7 @@ const Home = () => {
                           <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z" />
                           <path d="m8 3.293 4.712 4.712A4.5 4.5 0 0 0 8.758 15H3.5A1.5 1.5 0 0 1 2 13.5V9.293z" />
                         </svg>
-                        New York, NY 10012, US
+                        Lucknow, VN B-Block 13/508, UP
                       </p>
                       <p>
                         <svg
@@ -541,7 +432,7 @@ const Home = () => {
                           <path d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2zm-2 9.8V4.698l5.803 3.546zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.5 4.5 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586zM16 9.671V4.697l-5.803 3.546.338.208A4.5 4.5 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671" />
                           <path d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791" />
                         </svg>
-                        info@example.com
+                        DIYSpark@gmail.com
                       </p>
                       <p>
                         <svg
@@ -558,7 +449,7 @@ const Home = () => {
                             d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
                           />
                         </svg>
-                        + 01 234 567 88
+                        + 91 639 4466 522
                       </p>
                       <p>
                         <svg
@@ -572,7 +463,7 @@ const Home = () => {
                         >
                           <path d="M3 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm6 11a1 1 0 1 0-2 0 1 1 0 0 0 2 0" />
                         </svg>
-                        + 01 234 567 89
+                        + 91 916 5670 895
                       </p>
                     </div>
                     {/* Grid column */}

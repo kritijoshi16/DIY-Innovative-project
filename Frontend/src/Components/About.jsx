@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from './Navbar'
-import aboutvdo from '../assets/aboutvdo.mp4'
+import Aboutvideo from '../assets/Aboutvideo.mp4'
 
 const About = () => {
   return (
@@ -8,24 +8,25 @@ const About = () => {
       <Navbar />
       <section className="py-3 py-md-5 py-xl-8">
         <div className="container">
-          <h1>About</h1>
+          <h1>ABOUT</h1>
           <div className="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
             <div className="col-12 col-lg-6 col-xl-5">
-              <video className="video" src="/aboutvdo.mp4" alt="about" autoPlay loop muted controls></video>
-              {/*<video width={640} height={360} controls="">
-                <source src="C:\Users\KritiAdmin\DIY Innovative project\Frontend\src\assets\aboutvdo.mp4" type="video.mp4" />
-              </video>*/}
-              
+              <video className="video" type="video.mp4" src={Aboutvideo} controls style={{ height: "100%", width: "1300px" }}></video>
+              {/* <video width={640} height={360} controls="">
+                <source src="C:\Users\KritiAdmin\DIY Innovative project\Frontend\src\assets\Aboutvideo.mp4" type="video.mp4" />
+  </video>*/}
+
             </div>
             <div className="col-12 col-lg-6 col-xl-7">
               <div className="row justify-content-xl-center">
                 <div className="col-12 col-xl-11">
-                  <h2 className="h1 mb-3">Who Are We?</h2>
-                  <p className="lead fs-4 text-secondary mb-3">
+                  <h2 className="h1 mb-3" style={{marginTop: "-6%"}}>Who Are We?</h2>
+                  <p className="lead fs-4 mb-3" style={{ color: "blue"}}>
                     DIYSPARK is more than just a platform for DIY enthusiasts; it's a community-driven hub where creativity thrives, innovation flourishes, and imagination knows no bounds. Our passion lies in empowering individuals to embrace their inner maker and embark on DIY projects that spark joy, foster learning, and cultivate a sense of accomplishment.
                   </p>
-                  <p className="mb-5">
-                    Through easy-to-follow tutorials, step-by-step guides, and creative ideas, DIYSPARK aims to spark your imagination and fuel your passion for crafting. We believe that everyone has the potential to be a maker, and we're here to support you every step of the way. Join us as we embark on a journey of creativity, exploration, and endless possibilities. Let's ignite the spark of DIY creativity together!
+                  <p className="fs-5 mb-5" style={{ color: "orange"}}>
+                    Through easy-to-follow tutorials, step-by-step guides, and creative ideas, DIYSPARK aims to spark your imagination and fuel your passion for crafting.
+                      We're here to support you every step of the way. Join us as we embark on a journey of creativity, exploration, and endless possibilities. Let's ignite the spark of DIY creativity together!
                   </p>
                   <div className="row gy-4 gy-md-0 gx-xxl-5">
                     <div className="col-12 col-md-6">
@@ -44,7 +45,7 @@ const About = () => {
                         </div>
                         <div>
                           <h4 className="mb-3">Versatile Brand</h4>
-                          <p className="text-secondary mb-0">
+                          <p className=" mb-0"style={{ color: "blue"}}>
                             We are crafting a digital method that subsists life across all mediums.
                           </p>
                         </div>
@@ -66,7 +67,7 @@ const About = () => {
                         </div>
                         <div>
                           <h4 className="mb-3">Digital Agency</h4>
-                          <p className="text-secondary mb-0">
+                          <p className=" mb-0" style={{ color: "blue"}}>
                             We believe in innovation by merging primary with elaborate ideas.
                           </p>
                         </div>
