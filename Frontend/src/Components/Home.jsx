@@ -1,11 +1,31 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import About from '../assets/About.jpg'
 import Navbar from './Navbar'
 import gift from '../assets/gift.jpg'
 import craft from '../assets/craft.jpeg'
 import paper from '../assets/paper.jpeg'
 import homedecor from '../assets/homedecor.jpg'
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/pagination';
+
+// Import Images
+import slideimage1 from '../assets/slideimage1.jpg'
+import slideimage2 from '../assets/slideimage2.jpg'
+import slideimage3 from '../assets/slideimage3.jpg'
+import slideimage4 from '../assets/slideimage4.jpg'
+import slideimagee5 from '../assets/slideimagee5.jpg'
+import slideimage6 from '../assets/slideimage6.jpeg'
+
+
+
+// import required modules
+import { FreeMode, Pagination } from 'swiper/modules';
 
 const Home = () => {
 
@@ -14,151 +34,209 @@ const Home = () => {
 
     <div classname="main" >
       <Navbar />
-      <div>
-        <div className="containe ">
-          {/* <Fade bottom> */}
+      <section>
+        <div className="containe d-flex flex-column">
           <h1 className='s1-txt-h1'>Welcome to<br />
             <span>DIYSpark</span> <br />
           </h1>
           <p className='s1-txt-p'>"Where Hands Skillfully Craft Magnificent Wonders"</p>
-          {/* </Fade> */}
-          <Link to="/Contactus" className='btn btn-warning start-b'>Join Us</Link>
+          <Link to="/Contactus" className='btn btn-warning start-b mx-auto'>Join Us</Link>
         </div>
 
 
-      </div>
+      </section>
+
+      <section className='mt-4'>
+
+        <Swiper
+          slidesPerView={3}
+          spaceBetween={30}
+          freeMode={true}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[FreeMode, Pagination]}
+          className="mySwiper"
+        >
+          <SwiperSlide>
+            <img
+              src={slideimage1}
+              style={{height: 450, width: "600px" }}
+
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src={slideimage2}
+              style={{height: 450, width: "600px" }}
+
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src={slideimage3}
+              style={{height: 450, width: "600px" }}
+
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src={slideimage4}
+              style={{height: 450, width: "600px" }}
+
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src={slideimagee5}
+              style={{height: 450, width: "600px" }}
+
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src={slideimage6}
+              style={{height: 450, width: "600px" }}
+
+            />
+          </SwiperSlide>
+          <SwiperSlide>Slide 7</SwiperSlide>
+          <SwiperSlide>Slide 8</SwiperSlide>
+          <SwiperSlide>Slide 9</SwiperSlide>
+        </Swiper>
+      </section>
 
 
-      <>
-        <section className="py-5 py-xl-8">
-          <div className="container">
-            <div className="row justify-content-md-center">
-              <div className="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
-                <h2 className="h1 mb-4 text-center" style={{ color: "blue"}}>FEATURES</h2>
-                <p className="h5 mb-5 text-center" style={{ color: "purple"}}>
-                  Enjoy premium tools and materials designed to make your crafting experience seamless and enjoyable.
+
+      <section className="py-5 py-xl-8">
+        <div className="container">
+          <div className="row justify-content-md-center">
+            <div className="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+              <h2 className="h1 mb-4 text-center" style={{ color: "blue" }}>FEATURES</h2>
+              <p className="h5 mb-5 text-center" style={{ color: "purple" }}>
+                Enjoy premium tools and materials designed to make your crafting experience seamless and enjoyable.
+              </p>
+              <hr className="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle" />
+            </div>
+          </div>
+        </div>
+
+        <div className="container overflow-hidden">
+          <div className="row gy-5 gx-md-4 gy-lg-0 gx-xxl-5 justify-content-center">
+            <div className="card col-md-3 g-2 " >
+              <div
+                className="bg-image hover-overlay"
+                data-mdb-ripple-init=""
+                data-mdb-ripple-color="light"
+              >
+                <img
+                  src={gift}
+                  className="img-fluid"
+                  style={{ height: 250, width: "300px" }}
+                />
+                <a href="#!">
+                  <div
+                    className="mask"
+                    style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
+                  />
+                </a>
+              </div>
+              <div className="card-body">
+                <h5 className=" mb-3 card-title" style={{ color: "purple" }}>Customized Gifts</h5>
+                <p className="card-text" style={{ width: 290, color: "darkblue" }}>
+                  Make every occasion special with our exquisite range of customized gifts. Thoughtfully designed and personalized to reflect the recipient's unique personality and style, our gifts are perfect for creating unforgettable memories and heartfelt connections.
                 </p>
-                <hr className="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle" />
+              </div>
+            </div>
+
+            <div className="card col-md-3 g-2" >
+              <div
+                className="bg-image hover-overlay"
+                data-mdb-ripple-init=""
+                data-mdb-ripple-color="light"
+              >
+                <img
+                  src={craft}
+                  className="img-fluid"
+                  style={{ height: 250, width: "300px" }}
+                />
+                <a href="#!">
+                  <div
+                    className="mask"
+                    style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
+                  />
+                </a>
+              </div>
+
+              <div className="card-body">
+                <h5 className="mb-3 card-title" style={{ color: "purple" }}>Craft Making Kit</h5>
+                <p className="card-text" style={{ width: 290, color: "darkblue" }}>
+                  Dive into the enchanting world of craft making, where imagination knows no bounds & every creation tells a story. Whether you're an experienced artisan or a beginner, our craft making supplies and kits provide everything you need to bring your creative visions to life.
+                </p>
+              </div>
+            </div>
+
+            <div className="card col-md-3 g-2" >
+              <div
+                className="bg-image hover-overlay"
+                data-mdb-ripple-init=""
+                data-mdb-ripple-color="light"
+              >
+                <img
+                  src={paper}
+                  className="img-fluid"
+                  style={{ height: 250, width: "300px" }}
+                />
+                <a href="#!">
+                  <div
+                    className="mask"
+                    style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
+                  />
+                </a>
+              </div>
+              <div className="card-body">
+                <h5 className="mb-3 card-title" style={{ color: "purple" }}>Handy Paper work</h5>
+                <p className="card-text" style={{ width: 290, color: "darkblue" }}>
+                  Discover the perfect blend of functionality, sustainability, and style with our premium paper products. Whether you're looking for stationery, journals, or decorative paper, our collection offers something for everyone, crafted & designed to inspire.
+                </p>
+              </div>
+            </div>
+
+            <div className="card col-md-3 g-2" >
+              <div
+                className="bg-image hover-overlay"
+                data-mdb-ripple-init=""
+                data-mdb-ripple-color="light"
+              >
+                <img
+                  src={homedecor}
+                  className="img-fluid"
+                  style={{ height: 250, width: "300px" }}
+                />
+                <a href="#!">
+                  <div
+                    className="mask"
+                    style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
+                  />
+                </a>
+              </div>
+              <div className="card-body">
+                <h5 className="mb-3 card-title" style={{ color: "purple" }}>Home Decor Products</h5>
+                <p className="card-text" style={{ width: 290, color: "darkblue" }}>
+                  Elevate your living space with our curated collection of home decor. Whether you're looking to add a touch of elegance, a splash of color, or a cozy atmosphere, our unique pieces are designed to reflect your personal style and create a home you love.
+                </p>
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className="container overflow-hidden">
-            <div className="row gy-5 gx-md-4 gy-lg-0 gx-xxl-5 justify-content-center">
-              <div className="card col-md-3 g-2 " >
-                <div
-                  className="bg-image hover-overlay"
-                  data-mdb-ripple-init=""
-                  data-mdb-ripple-color="light"
-                >
-                  <img
-                    src={gift}
-                    className="img-fluid"
-                    style={{ height: 250, width: "300px" }}
-                  />
-                  <a href="#!">
-                    <div
-                      className="mask"
-                      style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
-                    />
-                  </a>
-                </div>
-                <div className="card-body">
-                  <h5 className=" mb-3 card-title" style={{ color: "purple"}}>Customized Gifts</h5>
-                  <p className="card-text" style={{ width: 290, color: "darkblue" }}>
-                    Make every occasion special with our exquisite range of customized gifts. Thoughtfully designed and personalized to reflect the recipient's unique personality and style, our gifts are perfect for creating unforgettable memories and heartfelt connections.
-                  </p>
-                </div>
-              </div>
-
-              <div className="card col-md-3 g-2" >
-                <div
-                  className="bg-image hover-overlay"
-                  data-mdb-ripple-init=""
-                  data-mdb-ripple-color="light"
-                >
-                  <img
-                    src={craft}
-                    className="img-fluid"
-                    style={{ height: 250, width: "300px" }}
-                  />
-                  <a href="#!">
-                    <div
-                      className="mask"
-                      style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
-                    />
-                  </a>
-                </div>
-
-                <div className="card-body">
-                  <h5 className="mb-3 card-title" style={{ color: "purple"}}>Craft Making Kit</h5>
-                  <p className="card-text" style={{ width: 290, color: "darkblue" }}>
-                    Dive into the enchanting world of craft making, where imagination knows no bounds & every creation tells a story. Whether you're an experienced artisan or a beginner, our craft making supplies and kits provide everything you need to bring your creative visions to life.
-                  </p>
-                </div>
-              </div>
-
-              <div className="card col-md-3 g-2" >
-                <div
-                  className="bg-image hover-overlay"
-                  data-mdb-ripple-init=""
-                  data-mdb-ripple-color="light"
-                >
-                  <img
-                    src={paper}
-                    className="img-fluid"
-                    style={{ height: 250, width: "300px" }}
-                  />
-                  <a href="#!">
-                    <div
-                      className="mask"
-                      style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
-                    />
-                  </a>
-                </div>
-                <div className="card-body">
-                  <h5 className="mb-3 card-title" style={{ color: "purple"}}>Handy Paper work</h5>
-                  <p className="card-text" style={{ width: 290, color: "darkblue" }}>
-                    Discover the perfect blend of functionality, sustainability, and style with our premium paper products. Whether you're looking for stationery, journals, or decorative paper, our collection offers something for everyone, crafted & designed to inspire.
-                  </p>
-                </div>
-              </div>
-
-              <div className="card col-md-3 g-2" >
-                <div
-                  className="bg-image hover-overlay"
-                  data-mdb-ripple-init=""
-                  data-mdb-ripple-color="light"
-                >
-                  <img
-                    src={homedecor}
-                    className="img-fluid"
-                    style={{ height: 250, width: "300px" }}
-                  />
-                  <a href="#!">
-                    <div
-                      className="mask"
-                      style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
-                    />
-                  </a>
-                </div>
-                <div className="card-body">
-                  <h5 className="mb-3 card-title" style={{ color: "purple"}}>Home Decor Products</h5>
-                  <p className="card-text" style={{ width: 290, color: "darkblue" }}>
-                    Elevate your living space with our curated collection of home decor. Whether you're looking to add a touch of elegance, a splash of color, or a cozy atmosphere, our unique pieces are designed to reflect your personal style and create a home you love.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </>
 
       <section>
         <div className="row d-flex justify-content-center">
           <div className="col-md-10 col-xl-8 text-center">
-            <h3 className="h1 mb-4" style={{ color: "blue"}}>FEEDBACK</h3>
-            <p className="h5 mb-4 pb-2 mb-md-5 pb-md-0" style={{ color: "purple"}}>
+            <h3 className="h1 mb-4" style={{ color: "blue" }}>FEEDBACK</h3>
+            <p className="h5 mb-4 pb-2 mb-md-5 pb-md-0" style={{ color: "purple" }}>
               DIYSpark: Where imagination meets craftsmanship, empowering you to bring your creative visions to life, one project at a time!
 
             </p>
@@ -243,7 +321,7 @@ const Home = () => {
                 style={{ backgroundColor: "#6351ce" }}
               >
                 {/* Left */}
-                <div className="me-5" style={{ color: "darkyellow"}}>
+                <div className="me-5" style={{ color: "darkyellow" }}>
                   <span>Get connected with us on social networks:</span>
                 </div>
                 {/* Left */}
@@ -371,27 +449,27 @@ const Home = () => {
                         style={{ width: 60, backgroundColor: "#7c4dff", height: 2 }}
                       />
                       <p>
-                      <Link to={"/Login"} style={{ color: "beige"}}>
+                        <Link to={"/Login"} style={{ color: "beige" }}>
                           LOGIN
                         </Link>
                       </p>
                       <p>
-                      <Link to={"/Signup"} style={{ color: "beige"}}>
+                        <Link to={"/Signup"} style={{ color: "beige" }}>
                           SIGNUP
                         </Link>
-                       
+
                       </p>
                       <p>
-                      <Link to={"/Contactus"} style={{ color: "beige"}}>
+                        <Link to={"/Contactus"} style={{ color: "beige" }}>
                           CONTACT
                         </Link>
-                        
+
                       </p>
                       <p>
-                      <Link to={"/Feedback"} style={{ color: "beige"}}>
+                        <Link to={"/Feedback"} style={{ color: "beige" }}>
                           FEEDBACK
                         </Link>
-                        
+
                       </p>
                     </div>
                     {/* Grid column */}
