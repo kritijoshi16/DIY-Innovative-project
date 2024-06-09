@@ -15,12 +15,15 @@ import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 
 // Import Images
-import slideimage1 from '../assets/slideimage1.jpg'
-import slideimage2 from '../assets/slideimage2.jpg'
-import slideimage3 from '../assets/slideimage3.jpg'
-import slideimage4 from '../assets/slideimage4.jpg'
-import slideimagee5 from '../assets/slideimagee5.jpg'
-import slideimage6 from '../assets/slideimage6.jpeg'
+import slideimg1 from '../assets/slideimg1.jpeg'
+import slideimg2 from '../assets/slideimg2.jpeg'
+import slideimg3 from '../assets/slideimg3.jpeg'
+import slideimg4 from '../assets/slideimg4.jpeg'
+import slideimg5 from '../assets/slideimg5.jpeg'
+import slideimg6 from '../assets/slideimg6.jpeg'
+import slideimg7 from '../assets/slideimg7.jpeg'
+import slideimg8 from '../assets/slideimg8.jpeg'
+import slideimg9 from '../assets/slideimg9.jpeg'
 
 
 
@@ -50,7 +53,7 @@ const Home = () => {
 
         <Swiper
           slidesPerView={3}
-          spaceBetween={30}
+          spaceBetween={10}
           freeMode={true}
           pagination={{
             clickable: true,
@@ -60,60 +63,66 @@ const Home = () => {
         >
           <SwiperSlide>
             <img
-              src={slideimage1}
-              style={{height: 450, width: "600px" }}
+              src={slideimg1}
 
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              src={slideimage2}
-              style={{height: 450, width: "600px" }}
+              src={slideimg2}
 
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              src={slideimage3}
-              style={{height: 450, width: "600px" }}
+              src={slideimg3}
 
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              src={slideimage4}
-              style={{height: 450, width: "600px" }}
+              src={slideimg4}
 
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              src={slideimagee5}
-              style={{height: 450, width: "600px" }}
+              src={slideimg5}
 
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              src={slideimage6}
-              style={{height: 450, width: "600px" }}
+              src={slideimg6}
 
             />
           </SwiperSlide>
-          <SwiperSlide>Slide 7</SwiperSlide>
-          <SwiperSlide>Slide 8</SwiperSlide>
-          <SwiperSlide>Slide 9</SwiperSlide>
+          <SwiperSlide>
+            <img
+            src={slideimg7}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+          <img
+            src={slideimg8}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+          <img
+            src={slideimg9}
+            />    
+          </SwiperSlide>
         </Swiper>
       </section>
 
 
 
-      <section className="py-5 py-xl-8">
+      <section className="feature py-5 py-xl-8 mt-3">
         <div className="container">
           <div className="row justify-content-md-center">
-            <div className="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+            <div className="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6  ">
               <h2 className="h1 mb-4 text-center" style={{ color: "blue" }}>FEATURES</h2>
-              <p className="h5 mb-5 text-center" style={{ color: "purple" }}>
+              <p className="h5 mb-4 text-center" style={{ color: "purple" }}>
                 Enjoy premium tools and materials designed to make your crafting experience seamless and enjoyable.
               </p>
               <hr className="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle" />
@@ -132,7 +141,7 @@ const Home = () => {
                 <img
                   src={gift}
                   className="img-fluid"
-                  style={{ height: 250, width: "300px" }}
+                  style={{ height: 250, width: "300px"}}
                 />
                 <a href="#!">
                   <div
@@ -233,10 +242,10 @@ const Home = () => {
 
 
       <section>
-        <div className="row d-flex justify-content-center">
+        <div className="select row d-flex justify-content-center mt-3">
           <div className="col-md-10 col-xl-8 text-center">
-            <h3 className="h1 mb-4" style={{ color: "blue" }}>FEEDBACK</h3>
-            <p className="h5 mb-4 pb-2 mb-md-5 pb-md-0" style={{ color: "purple" }}>
+            <h3 className="h1 mt-4" style={{ color: "blue" }}>FEEDBACK</h3>
+            <p className="h5 mb-4 pb-2 mb-md-5 pb-md-0 mt-4" style={{ color: "purple" }}>
               DIYSpark: Where imagination meets craftsmanship, empowering you to bring your creative visions to life, one project at a time!
 
             </p>

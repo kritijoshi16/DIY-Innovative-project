@@ -23,6 +23,7 @@
     max-width: 100rem;
     padding: 4rem 1rem;
     margin: 0 auto;
+    background-image: url("assets/BGimg.jpeg");
 }
 
 /*background-image: url("assets/downloads.jpg");
@@ -75,9 +76,24 @@
 
 .swiper-slide img {
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 390px;
+    height: 450px;
     background-size: cover;
+}
+
+.select {
+    background-image: url("assets/BGimg.jpeg");
+
+}
+
+.feature {
+    background-image: url("assets/aboutbg.jpeg");
+}
+
+.about {
+    /*background-image: url("assets/aboutbg.jpeg");*/
+    background-color: whitesmoke;
+
 }
 
 .navbar {

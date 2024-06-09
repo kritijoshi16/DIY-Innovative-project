@@ -7,7 +7,7 @@ import { useFormik } from 'formik'
 // import { toast } from 'react-hot-toast';
 import useAppContext from '../AppContext';
 import Navbar from './Navbar';
-import login from '../assets/login.jpg'
+import loginform from '../assets/loginform.jpeg'
 
 
 const LoginSchema = Yup.object().shape({
@@ -86,10 +86,10 @@ const Login = () => {
           <div className="row g-0">
             <div className="col-md-6 col-lg-5 d-none d-md-block">
               <img
-                src={login}
+                src={loginform}
                 alt="login form"
                 className="img-fluid"
-                style={{ borderRadius: "1rem 0 0 1rem",height:"100%",width:"900px" }}
+                style={{ borderRadius: "1rem 0 0 1rem",height:"650px",width:"900px" }}
               />
             </div>
             <div className="col-md-6 col-lg-7 d-flex align-items-center">
@@ -100,7 +100,7 @@ const Login = () => {
                       className="fas fa-cubes fa-2x me-3"
                       style={{ color: "#ff6219" }}
                     />
-                    <span className="h1 fw-bold mb-0">DIYSpark</span>
+                    <span className="h1 fw-bold mb-0" style={{ color: "#ff7200" }}>DIYSpark</span>
                   </div>
                   <h5
                     className="fw-normal mb-3 pb-3"

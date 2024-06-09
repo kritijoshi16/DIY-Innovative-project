@@ -6,11 +6,11 @@ const About = () => {
   return (
     <div>
       <Navbar />
-      <section className="py-3 py-md-5 py-xl-8">
-        <div className="container">
+      <section className="about py-3  py-xl-8 ">
+        <div className="container" style={{ textAlign: "center",  }}>
           <h1>ABOUT</h1>
           <div className="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
-            <div className="col-12 col-lg-6 col-xl-5">
+            <div className="col-12 col-lg-6 col-xl-5 mt-2">
               <video className="video" type="video.mp4" src={Aboutvideo} controls style={{ height: "100%", width: "1300px" }}></video>
               {/* <video width={640} height={360} controls="">
                 <source src="C:\Users\KritiAdmin\DIY Innovative project\Frontend\src\assets\Aboutvideo.mp4" type="video.mp4" />

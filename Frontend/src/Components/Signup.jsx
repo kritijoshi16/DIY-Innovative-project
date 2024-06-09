@@ -5,6 +5,7 @@ import { enqueueSnackbar } from 'notistack';
 import { useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
 import useAppContext from '../AppContext';
+import signupform from '../assets/signupform.jpeg'
 
 const SignupSchema = Yup.object().shape({
   firstname: Yup.string()
@@ -147,16 +148,11 @@ const Signup = () => {
             </div>
             <div className="col-md-6 ">
               <img
-                src="https://img.freepik.com/free-photo/young-child-making-diy-project-from-upcycled-materials_23-2149391054.jpg"
+                src= {signupform}
                 alt="Sample photo"
                 className="img-fluid  "
-                style={{
-                  borderTopLeftRadius: ".25rem",
-                  borderBottomLeftRadius: ".25rem",
-                  objectFit: 'cover',
-                  objectPosition: "right",
-                  height: "80%",
-                  width: "60%",
+                style={{borderRadius: "0rem 1rem 1rem 0rem",height:"590px",width:"400px"
+                  
                 }}
               />
             </div>

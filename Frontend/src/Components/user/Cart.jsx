@@ -27,10 +27,10 @@ const Cart = () => {
             <div className="text-center">
 
                 <h3>Your Cart is Currently Empty!</h3>
-                <p className="text-muted">Before proceed to checkout you must add some products to your shopping cart. <br />You will fill a lot of interesting products on our "Product" page.</p>
+                <p className=" " style={{ color: "maroon" }}> Before proceed to checkout you must add some products to your shopping cart. <br />You will fill a lot of interesting products on our "Product" page.</p>
                 <div class="d-grid gap-2 col-6 mx-auto">
-                    <Link to={"/ProductListing"} class="bttn btn-primary " type="button">Return to shop</Link>
-                   
+                    <Link to={"/ProductListing"} class="bttn btn-primary mx-auto" type="button">Return to shop</Link>
+
                 </div>
             </div>
         );
@@ -71,19 +71,19 @@ const Cart = () => {
             <div className="container" style={{ marginTop: "100px" }}>
                 <div className="card vh-80 shadow">
                     <div className="row g-0">
-                        <div className="col-md-9">
-                            <h2 className="my-3 mx-3 fw-bold fs-3 text-center" style={{ color: "teal", fontFamily: 'initial' }}>Shopping Cart</h2>
+                        <div className=" heading col-md-9">
+                            <h2 className=" my-3 mx-3 fw-bold fs-3 text-center" style={{ color: "blue", fontFamily: 'initial' }}>Shopping Cart</h2>
                             <hr className='my-3' />
                             {displayCartItems()}
                         </div>
                         <div className="col-md-3">
-                            <div className="card-body">
-                                <div className="card vh-50">
-                                    <div className="card-body">
-                                        <h3 style={{ color: "teal", fontFamily: 'initial' }}>Order Summary</h3>
+                            <div className=" order card-body">
+                                <div className=" card vh-50">
+                                    <div className=" orders card-body">
+                                        <h3 style={{ color: "blue", fontFamily: "cursive" }}>Order Summary</h3>
                                         <hr />
-                                        <p ><span style={{ color: "teal", fontFamily: 'initial', marginInline: "5px" }} >Total:</span>{getCartTotal()}</p>
-                                        <p><span style={{ color: "teal", fontFamily: 'initial', marginInline: "5px" }}>Items:</span>{getCartItemsCount()}</p>
+                                        <p ><span style={{ color: "darkblue", fontFamily: 'initial', marginInline: "5px" }} >Total:</span>{getCartTotal()}</p>
+                                        <p><span style={{ color: "darkblue", fontFamily: 'initial', marginInline: "5px" }}>Items:</span>{getCartItemsCount()}</p>
                                         <button className='bttn btn-outline-danger my-2' onClick={() => clearCart()}><i className="bi bi-archive "></i>Clear </button>
                                         <Link to="/checkout" > <button className="bttn btn-outline-warning ms-2 "><i className="bi bi-bag px-1" ></i>Buy Now</button></Link>
                                     </div>
