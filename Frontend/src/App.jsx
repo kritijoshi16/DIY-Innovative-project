@@ -26,6 +26,9 @@ import OrderHistory from './Components/user/Orders'
 import User from './Components/user'
 import Dashboard from './Components/admin/Dashboard'
 import About from './Components/About'
+import AdminAuth from './AdminAuth'
+import UserAuth from './UserAuth'
+
 
 
 
@@ -45,7 +48,7 @@ const App = () => {
                 <Route path='/Login' element={<Login />} />
 
                 <Route path='/Contactus' element={<Contactus />} />
-                <Route path='/Feedback' element={<Feedback />} />
+                <Route path='/Feedback' element={<UserAuth><Feedback /></UserAuth>} />
                 <Route path='/About' element={<About />} />
 
 
@@ -54,16 +57,16 @@ const App = () => {
                 <Route path='/user' element={<User />}>
                   <Route path='ProductListing' element={<ProductListing />} />
                   <Route path='ForgetPassword' element={<ForgetPassword />} />
-                  <Route path='ViewProduct/:id' element={<ViewProduct />} />
+                  <Route path='ViewProduct/:id' element={<UserAuth><ViewProduct /></UserAuth>} />
                   <Route path='Cart' element={<Cart />} />
-                  <Route path='Tutorial' element={<Tutorial />} />
+                  <Route path='Tutorial' element={<UserAuth><Tutorial /></UserAuth>} />
                   <Route path='thankyou' element={<ThankYou />} />
                   <Route path='order' element={<OrderHistory />} />
 
                 </Route>
 
 
-                <Route path='/admin' element={<Admin />}>
+                <Route path='/admin' element={<AdminAuth><Admin /></AdminAuth>}>
                   <Route path='manageproduct' element={<ManageProduct />} />
                   <Route path='updateproduct/:id' element={<UpdateProduct />} />
                   <Route path='ManageUser' element={<ManageUser />} />
