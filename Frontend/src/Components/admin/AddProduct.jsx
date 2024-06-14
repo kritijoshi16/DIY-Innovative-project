@@ -90,7 +90,7 @@ const AddProduct = () => {
   return (
     <div className='container'>
       <div className="col">
-        <div className="Card w-50 d-block mx-auto">
+        <div className="Card w-50 d-block mx-auto mt-4">
           <div className="card-header" style={{text:"center"}}>
             <h3>Product</h3>
           </div>

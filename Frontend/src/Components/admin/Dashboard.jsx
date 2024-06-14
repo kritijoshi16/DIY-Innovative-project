@@ -9,11 +9,13 @@ const Dashboard = () => {
       <p className=''>
         <ReactTyped
           style={{fontSize: '80px', color: '#ff6219', fontWeight: 'bold'}}
-          strings={["DIY INNOVATES"]}
+          strings={["DIY SPARK"]}
           typeSpeed={120}
           backSpeed={50}
           loop={true}
+          
         /></p>
+      
 
 
     

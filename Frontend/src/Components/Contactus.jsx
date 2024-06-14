@@ -62,7 +62,7 @@ const Contactus = () => {
             <h3 className="fs-6 text-secondary mb-2 text-uppercase text-center">
               Do hands-on Craft
             </h3>
-            <h2 className="display-5 mb-4 mb-md-5 text-center">
+            <h2 className="display-6 mb-4 mb-md-5 text-center">
             Crafting memories, not just materials, through DIY adventures.
             </h2>
             <hr className="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle" />

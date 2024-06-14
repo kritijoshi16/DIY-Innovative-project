@@ -262,7 +262,7 @@ const Home = () => {
                 />
               </div>
               <div className="card-body">
-                <h4 className="mb-4">Maria Smantha</h4>
+                <h4 className="mb-4">Anshika</h4>
                 <hr />
                 <p className="dark-grey-text mt-4">
                   <i className="fas fa-quote-left pe-2" />
@@ -282,7 +282,7 @@ const Home = () => {
                 />
               </div>
               <div className="card-body">
-                <h4 className="mb-4">Lisa Cudrow</h4>
+                <h4 className="mb-4">kritz</h4>
                 <hr />
                 <p className="dark-grey-text mt-4">
                   <i className="fas fa-quote-left pe-2" />
@@ -301,7 +301,7 @@ const Home = () => {
                 />
               </div>
               <div className="card-body">
-                <h4 className="mb-4">John Smith</h4>
+                <h4 className="mb-4">Prince</h4>
                 <hr />
                 <p className="dark-grey-text mt-4">
                   <i className="fas fa-quote-left pe-2" />
@@ -475,8 +475,8 @@ const Home = () => {
 
                       </p>
                       <p>
-                        <Link to={"/Feedback"} style={{ color: "beige" }}>
-                          FEEDBACK
+                        <Link to={"/about"} style={{ color: "beige" }}>
+                          ABOUT
                         </Link>
 
                       </p>

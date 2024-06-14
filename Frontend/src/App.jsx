@@ -8,7 +8,6 @@ import Contactus from './Components/Contactus'
 import './App.css'
 import Home from './Components/Home'
 import ManageUser from './Components/admin/ManageUser'
-
 import ProductListing from './Components/user/ProductListing'
 import { AppProvider } from '../src/AppContext'
 import Admin from './Components/admin'
@@ -29,10 +28,6 @@ import About from './Components/About'
 import AdminAuth from './AdminAuth'
 import UserAuth from './UserAuth'
 
-
-
-
-
 const App = () => {
   return (
     <div>
@@ -51,7 +46,6 @@ const App = () => {
                 <Route path='/Feedback' element={<UserAuth><Feedback /></UserAuth>} />
                 <Route path='/About' element={<About />} />
 
-
                 <Route path='checkout' element={<Checkout />} />
 
                 <Route path='/user' element={<User />}>
@@ -65,7 +59,6 @@ const App = () => {
 
                 </Route>
 
-
                 <Route path='/admin' element={<AdminAuth><Admin /></AdminAuth>}>
                   <Route path='manageproduct' element={<ManageProduct />} />
                   <Route path='updateproduct/:id' element={<UpdateProduct />} />
@@ -73,9 +66,7 @@ const App = () => {
                   <Route path='AddProduct' element={<AddProduct />} />
                   <Route path='dashboard' element={<Dashboard />} />
 
-
                 </Route>
-
 
               </Routes>
             </AppProvider>
