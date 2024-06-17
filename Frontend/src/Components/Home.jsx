@@ -43,7 +43,7 @@ const Home = () => {
             <span>DIYSpark</span> <br />
           </h1>
           <p className='s1-txt-p'>"Where Hands Skillfully Craft Magnificent Wonders"</p>
-          <Link to="/Contactus" className='btn btn-warning start-b mx-auto'>Join Us</Link>
+          <Link to="/signup" className='btn btn-warning start-b mx-auto'>Join Us</Link>
         </div>
 
 

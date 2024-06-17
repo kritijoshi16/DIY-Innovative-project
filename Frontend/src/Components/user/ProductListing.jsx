@@ -77,16 +77,16 @@ const ProductListing = () => {
                     <input onChange={applysearch} type='search' id='default-search' placeholder='Search Products' className='form-control w-75 m-auto' />
                 </div>
                 <div className='flex justify-evenly mt-3 '>
-                    <button className='bg-black text-black  hover:text-black py-2 px-4 border m-5'
-                        id="showpieces" onClick={(e) => filterbyCategory("handycraft")}>Handy Craft </button>
-                    <button className='bg-black text-black  hover:text-black py-2 px-4 border m-5'
-                        id="showpieces" onClick={(e) => filterbyCategory("customized gift")}>Customized Gifts </button>
-                    <button className='bg-black text-black  hover:text-black py-2 px-4 border m-5'
-                        id="showpieces" onClick={(e) => filterbyCategory("craft making ")}>Craft's Kit </button>
-                    <button className='bg-black text-black  hover:text-black py-2 px-4 border m-5'
+                    <button className='bg-black text-black  hover:text-black py-3 px-3 border m-5'
+                        id="handy craft" onClick={(e) => filterbyCategory("handycraft")}>Handy Craft </button>
+                    <button className='bg-black text-black  hover:text-black py-3 px-3 border m-5'
+                        id="customized gifts" onClick={(e) => filterbyCategory("customized gift")}>Customized Gifts </button>
+                    <button className='bg-black text-black  hover:text-black py-3 px-3 border m-5'
+                        id="craft kit" onClick={(e) => filterbyCategory("craftkit")}>Craft Kit </button>
+                    <button className='bg-black text-black  hover:text-black py-3 px-3 border m-5'
                         id="handmade items" onClick={(e) => filterbyCategory("handmade item")}>Handmade Items</button>
-                    <button className='bg-black text-black  hover:text-black py-2 px-4 border m-5'
-                        id="homedecor" onClick={(e) => filterbyCategory("home decor")}>Home Decors</button>
+                    <button className='bg-black text-black  hover:text-black py-3 px-3 border m-5'
+                        id="home decors" onClick={(e) => filterbyCategory("home decor")}>Home Decors</button>
                 </div>
             </header>
 

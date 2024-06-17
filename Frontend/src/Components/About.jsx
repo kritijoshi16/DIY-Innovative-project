@@ -7,7 +7,7 @@ const About = () => {
     <div>
       <Navbar />
       <section className="about py-3  py-xl-8 ">
-        <div className="container" style={{ textAlign: "center",  }}>
+        <div className="container" style={{ textAlign: "center" }}>
           <h1>ABOUT</h1>
           <div className="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
             <div className="col-12 col-lg-6 col-xl-5 mt-2">
@@ -21,10 +21,10 @@ const About = () => {
               <div className="row justify-content-xl-center">
                 <div className="col-12 col-xl-11">
                   <h2 className="h1 mb-3" style={{marginTop: "-6%"}}>Who Are We?</h2>
-                  <p className="lead fs-4 mb-3" style={{ color: "blue"}}>
+                  <p className=" fs-5 mb-3" style={{ color: "magenta" }}>
                     DIYSPARK is more than just a platform for DIY enthusiasts; it's a community-driven hub where creativity thrives, innovation flourishes, and imagination knows no bounds. Our passion lies in empowering individuals to embrace their inner maker and embark on DIY projects that spark joy, foster learning, and cultivate a sense of accomplishment.
                   </p>
-                  <p className="fs-5 mb-5" style={{ color: "orange"}}>
+                  <p className=" fs-5 mb-5" style={{ color: "orange"}}>
                     Through easy-to-follow tutorials, step-by-step guides, and creative ideas, DIYSPARK aims to spark your imagination and fuel your passion for crafting.
                       We're here to support you every step of the way. Join us as we embark on a journey of creativity, exploration, and endless possibilities. Let's ignite the spark of DIY creativity together!
                   </p>
@@ -44,8 +44,8 @@ const About = () => {
                           </svg>
                         </div>
                         <div>
-                          <h4 className="mb-3">Versatile Brand</h4>
-                          <p className=" mb-0"style={{ color: "blue"}}>
+                          <h4 className="mb-3"style={{ color: "lightblue"}}>Versatile Brand</h4>
+                          <p className=" mb-0"style={{ color: "yellow"}}>
                             We are crafting a digital method that subsists life across all mediums.
                           </p>
                         </div>
@@ -66,7 +66,7 @@ const About = () => {
                           </svg>
                         </div>
                         <div>
-                          <h4 className="mb-3">Digital Agency</h4>
+                          <h4 className="mb-3"style={{ color: "lightblue"}} >Digital Agency</h4>
                           <p className=" mb-0" style={{ color: "blue"}}>
                             We believe in innovation by merging primary with elaborate ideas.
                           </p>
