@@ -14,7 +14,6 @@ import Admin from './Components/admin'
 import ManageProduct from './Components/admin/ManageProduct'
 import UpdateProduct from './Components/admin/UpdateProduct'
 import Feedback from './Components/Feedback'
-import ForgetPassword from './Components/user/ForgetPassword'
 import ViewProduct from './Components/user/ViewProduct'
 import Tutorial from './Components/user/Tutorial'
 import Cart from './Components/user/Cart'
@@ -27,6 +26,7 @@ import Dashboard from './Components/admin/Dashboard'
 import About from './Components/About'
 import AdminAuth from './AdminAuth'
 import UserAuth from './UserAuth'
+import ForgetPassword from './Components/ForgetPassword'
 
 const App = () => {
   return (
@@ -41,6 +41,7 @@ const App = () => {
                 <Route path='/Home' element={<Home />} />
                 <Route path='/Signup' element={<Signup />} />
                 <Route path='/Login' element={<Login />} />
+                <Route path='/ForgetPassword' element={<ForgetPassword />} />
 
                 <Route path='/Contactus' element={<Contactus />} />
                 <Route path='/Feedback' element={<UserAuth><Feedback /></UserAuth>} />
@@ -50,7 +51,6 @@ const App = () => {
 
                 <Route path='/user' element={<User />}>
                   <Route path='ProductListing' element={<ProductListing />} />
-                  <Route path='ForgetPassword' element={<ForgetPassword />} />
                   <Route path='ViewProduct/:id' element={<UserAuth><ViewProduct /></UserAuth>} />
                   <Route path='Cart' element={<Cart />} />
                   <Route path='Tutorial' element={<UserAuth><Tutorial /></UserAuth>} />
