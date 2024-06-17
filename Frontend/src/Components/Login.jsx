@@ -26,7 +26,6 @@ const Login = () => {
     //step1 : formik initialization
     const LoginForm = useFormik({
         initialValues: {
-
             email: '',
             password: '',
         },
