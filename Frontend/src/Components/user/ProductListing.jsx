@@ -78,11 +78,11 @@ const ProductListing = () => {
                 </div>
                 <div className='flex justify-evenly mt-3 '>
                     <button className='bg-black text-black  hover:text-black py-2 px-4 border m-5'
-                        id="showpieces" onClick={(e) => filterbyCategory("showpiece")}>Showpieces </button>
+                        id="showpieces" onClick={(e) => filterbyCategory("handycraft")}>Handy Craft </button>
                     <button className='bg-black text-black  hover:text-black py-2 px-4 border m-5'
                         id="showpieces" onClick={(e) => filterbyCategory("customized gift")}>Customized Gifts </button>
                     <button className='bg-black text-black  hover:text-black py-2 px-4 border m-5'
-                        id="showpieces" onClick={(e) => filterbyCategory("craft making ")}>Craft Making Kit </button>
+                        id="showpieces" onClick={(e) => filterbyCategory("craft making ")}>Craft's Kit </button>
                     <button className='bg-black text-black  hover:text-black py-2 px-4 border m-5'
                         id="handmade items" onClick={(e) => filterbyCategory("handmade item")}>Handmade Items</button>
                     <button className='bg-black text-black  hover:text-black py-2 px-4 border m-5'
